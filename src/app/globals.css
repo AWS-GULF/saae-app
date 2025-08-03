@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* @font-face {
+  font-family: 'Tajawal';
+  src: url('https://fonts.gstatic.com/s/tajawal/v9/Iura6YBj_oCad4k1r_5qy5oOK_Kw.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tajawal';
+  src: url('https://fonts.gstatic.com/s/tajawal/v9/Iura6YBj_oCad4k1r_5qy5oOK_Kw.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+} */
+
+@theme {
+  --color-primary: #280659;
+  --color-secondary: #764895;
+}
+
+/* Tajwal Font Class */
+.font-tajwal {
+  font-family: var(--font-tajawal), sans-serif;
+}
