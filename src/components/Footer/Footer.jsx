@@ -2,11 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/Assets/images/light-logo.svg";
-import facebook from "@/assets/icons/fb.svg";
-import telegram from "@/assets/icons/telegram.svg";
-import whatsapp from "@/assets/icons/whats.svg";
-import twitter from "@/assets/icons/twitter.svg";
-import instagram from "@/assets/icons/insta.svg";
+import facebook from "@/Assets/icons/fb.svg";
+import telegram from "@/Assets/icons/telegram.svg";
+import whatsapp from "@/Assets/icons/whats.svg";
+import twitter from "@/Assets/icons/twitter.svg";
+import instagram from "@/Assets/icons/insta.svg";
 import { useLanguage } from "@/hooks/useLanguage";
 
 export default function Footer() {
