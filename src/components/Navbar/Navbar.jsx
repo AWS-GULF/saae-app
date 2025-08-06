@@ -125,7 +125,7 @@ export function MobileNavbar() {
                             >
                                 <div className="flex items-center justify-between">
                                     {t('about')}
-                                    <svg className="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className={`w-4 h-4 text-purple-600 ${locale==="ar" && "rotate-180"} ` } fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                                     </svg>
                                 </div>
@@ -154,7 +154,7 @@ export function MobileNavbar() {
                             >
                                 <div className="flex items-center justify-between">
                                     {t('services')}
-                                    <svg className="w-4 h-4 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className={ `${locale==="ar" && "rotate-180"} w-4 h-4 text-purple-600 ` } fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                                     </svg>
                                 </div>
@@ -182,7 +182,7 @@ export function MobileNavbar() {
 
                         {/* Language Selector at Bottom */}
                         <div className=" py-6 px-4">
-                            <button 
+                            <button
                                 className="flex items-center gap-3 w-full justify-start"
                                 onClick={toggleLanguage}
                             >
@@ -290,21 +290,21 @@ export function Navbar() {
 
     return (
         <>
-                <div className="hidden md:flex">    
-                <NavigationMenu className="px-20 hidden md:flex ">
-            <Image
-                src={logo}
-                alt="Logo"
-                width={245}
-                height={80}
-                        className=""
+            <div className="hidden sm:flex">
+                <NavigationMenu className={`lg:px-20 px-4 hidden md:flex ${locale==="ar" && "md:flex-row-reverse md:flex"}`}>
+                    <Image
+                        src={logo}
+                        alt="Logo"
+                        // width={245}
+                        // height={80}
+                        className="lg:w-[245px] lg:h-[80px] sm:w-[150px] h-[80px]"
                     />
                     <NavigationMenuList className="" key={pathname}>
                         <NavigationMenuItem>
                             <NavigationMenuLink asChild className="bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent">
-                                <Link href="/" className={`px-4 py-2 rounded-none text-[15px] font-medium transition-colors duration-200 bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent ${pathname === "/" ? "text-purple-600" : "text-black"}`}>{t('home')}</Link>
-                    </NavigationMenuLink>
-                </NavigationMenuItem>
+                                <Link href="/" className={`lg:px-4 sm:px-2 py-2 rounded-none sm:text-[10px] md:text-[10px] xl:text-base  font-medium transition-colors duration-200 bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent ${pathname === "/" ? "text-purple-600" : "text-black"}`}>{t('home')}</Link>
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>
 
                         {/* About Dropdown - Desktop */}
                         <NavigationMenuItem
@@ -314,11 +314,11 @@ export function Navbar() {
                             <NavigationMenuLink asChild className="bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent">
                                 <Link
                                     href="/about"
-                                    className={`px-4 py-2 rounded-none text-[15px] font-medium transition-colors duration-200 bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent ${aboutDropdownOpen || pathname === "/about" ? "text-purple-600" : "text-black"}`}
+                                    className={`lg:px-4 sm:px-2 py-2 rounded-none sm:text-[10px] md:text-[10px] xl:text-base  font-medium transition-colors duration-200 bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent ${aboutDropdownOpen || pathname === "/about" ? "text-purple-600" : "text-black"}`}
                                 >
                                     {t('about')}
                                 </Link>
-                                </NavigationMenuLink>
+                            </NavigationMenuLink>
                             {aboutDropdownOpen && (
                                 <div className="absolute mt-2 bg-white shadow-lg rounded-md py-2 min-w-[180px] z-50">
                                     {aboutItems.map((item) => (
@@ -332,7 +332,7 @@ export function Navbar() {
                                     ))}
                                 </div>
                             )}
-                </NavigationMenuItem>
+                        </NavigationMenuItem>
 
                         {/* Services Dropdown - Desktop */}
                         <NavigationMenuItem
@@ -342,7 +342,7 @@ export function Navbar() {
                             <NavigationMenuLink asChild className="bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent">
                                 <Link
                                     href="/services"
-                                    className={`px-4 py-2 rounded-none text-medium font-medium transition-colors duration-200 bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent ${servicesDropdownOpen || pathname === "/services" ? "text-purple-600" : "text-black"}`}
+                                    className={`lg:px-4 sm:px-2 py-2 rounded-none sm:text-[10px] md:text-[10px] xl:text-base    text-medium font-medium transition-colors duration-200 bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent ${servicesDropdownOpen || pathname === "/services" ? "text-purple-600" : "text-black"}`}
                                 >
                                     {t('services')}
                                 </Link>
@@ -360,44 +360,44 @@ export function Navbar() {
                                     ))}
                                 </div>
                             )}
-                </NavigationMenuItem>
+                        </NavigationMenuItem>
 
-                <NavigationMenuItem>
-                            <NavigationMenuLink asChild className="bg-transparent md:text-[15px] hover:bg-transparent focus:bg-transparent active:bg-transparent">
-                                <Link href="/casestudies" className={`px-4 py-2 rounded-none text-base font-medium transition-colors duration-200 bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent ${pathname === "/casestudies" ? "text-purple-600" : "text-black"}`}>{t('caseStudies')}</Link>
-                    </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                            <NavigationMenuLink asChild className="bg-transparent md:text-[15px] hover:bg-transparent focus:bg-transparent active:bg-transparent">
-                                <Link href="/ourteam" className={`px-4 py-2 rounded-none text-base font-medium transition-colors duration-200 bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent ${pathname === "/ourteam" ? "text-purple-600" : "text-black"}`}>{t('ourTeam')}</Link>
-                    </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                            <NavigationMenuLink asChild className="bg-transparent md:text-[15px] hover:bg-transparent focus:bg-transparent active:bg-transparent">
-                                <Link href="/careers" className={`px-4 py-2 rounded-none text-base font-medium transition-colors duration-200 bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent ${pathname === "/careers" ? "text-purple-600" : "text-black"}`}>{t('career')}</Link>
-                    </NavigationMenuLink>
-                </NavigationMenuItem>
-                <NavigationMenuItem>
-                            <NavigationMenuLink asChild className="bg-transparent md:text-[15px] hover:bg-transparent focus:bg-transparent active:bg-transparent">
-                                <Link href="/contactus" className={`px-4 py-2 rounded-none text-base font-medium transition-colors duration-200 bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent ${pathname === "/contactus" ? "text-purple-600" : "text-black"}`}>{t('contactUs')}</Link>
-                    </NavigationMenuLink>
-                </NavigationMenuItem>
-            </NavigationMenuList>
-                    <button 
+                        <NavigationMenuItem>
+                            <NavigationMenuLink asChild className="bg-transparent md:sm:text-[10px] md:text-[10px] xl:text-base  hover:bg-transparent focus:bg-transparent active:bg-transparent">
+                                <Link href="/casestudies" className={`lg:px-4 sm:px-2 py-2 rounded-none text-base font-medium transition-colors duration-200 bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent ${pathname === "/casestudies" ? "text-purple-600" : "text-black"}`}>{t('caseStudies')}</Link>
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>
+                        <NavigationMenuItem>
+                            <NavigationMenuLink asChild className="bg-transparent md:sm:text-[10px] md:text-[10px] xl:text-base  hover:bg-transparent focus:bg-transparent active:bg-transparent">
+                                <Link href="/ourteam" className={`lg:px-4 sm:px-2 py-2 rounded-none text-base font-medium transition-colors duration-200 bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent ${pathname === "/ourteam" ? "text-purple-600" : "text-black"}`}>{t('ourTeam')}</Link>
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>
+                        <NavigationMenuItem>
+                            <NavigationMenuLink asChild className="bg-transparent md:sm:text-[10px] md:text-[10px] xl:text-base  hover:bg-transparent focus:bg-transparent active:bg-transparent">
+                                <Link href="/careers" className={`lg:px-4 sm:px-2 py-2 rounded-none text-base font-medium transition-colors duration-200 bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent ${pathname === "/careers" ? "text-purple-600" : "text-black"}`}>{t('career')}</Link>
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>
+                        <NavigationMenuItem>
+                            <NavigationMenuLink asChild className="bg-transparent md:sm:text-[10px] md:text-[10px] xl:text-base  hover:bg-transparent focus:bg-transparent active:bg-transparent">
+                                <Link href="/contactus" className={`lg:px-4 sm:px-2 py-2 rounded-none text-base font-medium transition-colors duration-200 bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent ${pathname === "/contactus" ? "text-purple-600" : "text-black"}`}>{t('contactUs')}</Link>
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>
+                    </NavigationMenuList>
+                    <button
                         className="flex items-center gap-2"
                         onClick={toggleLanguage}
                     >
-                <Image
-                    src={global}
-                    alt="Logo"
-                />
+                        <Image
+                            src={global}
+                            alt="Logo"
+                        />
                         <span>{t('language')}</span>
-            </button>
-        </NavigationMenu>
-        </div>
-        <div className="md:hidden block">
-      <MobileNavbar />
-        </div>
+                    </button>
+                </NavigationMenu>
+            </div>
+            <div className="md:hidden block">
+                <MobileNavbar />
+            </div>
         </>
     );
 }

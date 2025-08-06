@@ -136,6 +136,43 @@
   --sidebar-ring: oklch(0.556 0 0);
 }  */
 
+/* Custom Carousel Styles */
+[data-slot="carousel-previous"], 
+[data-slot="carousel-next"] {
+  z-index: 20 !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+}
+
+[data-slot="carousel-previous"]:hover, 
+[data-slot="carousel-next"]:hover {
+  transform: scale(1.05);
+  transition: all 0.2s ease;
+}
+
+[data-slot="carousel-previous"]:disabled, 
+[data-slot="carousel-next"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Full width carousel */
+[data-slot="carousel"] {
+  width: 100vw !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+[data-slot="carousel-content"] {
+  margin-left: 0 !important;
+}
+
+[data-slot="carousel-item"] {
+  padding-left: 0 !important;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

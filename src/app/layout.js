@@ -30,9 +30,15 @@ export default function RootLayout({ children }) {
   if (!isClient) {
     return (
       <html lang="en" dir={dir}  className={tajawal.variable}>
-        <body className="font-tajwal w-full">
+        <head>
+          <link rel="icon" type="image/svg+xml" href="/light-logo.svg" />
+          <link rel="icon" type="image/png" href="/light-logo.svg" />
+        </head>
+        <body className="font-tajwal w-full min-h-screen flex flex-col">
           <Navbar />
-          {children}
+          <main className="flex-grow  overflow-hidden" >
+            {children}
+          </main>
           <Footer/>
         </body>
       </html>
@@ -41,9 +47,15 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang={locale} dir={dir}  className={tajawal.variable}>
-      <body className="font-tajwal w-full">
+      <head>
+        <link rel="icon" type="image/svg+xml" href="/light-logo.svg" />
+        <link rel="icon" type="image/png" href="/light-logo.svg" />
+      </head>
+      <body className="font-tajwal w-full min-h-screen flex flex-col">
         <Navbar />
-        {children}
+        <main className="flex-grow  overflow-hidden" >
+          {children}
+        </main>
         <Footer/>
       </body>
     </html>

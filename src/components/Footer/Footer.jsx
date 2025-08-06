@@ -13,7 +13,7 @@ export default function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-primary text-white pt-12 pb-4 px-4 fixed bottom-0 left-0 right-0 ">
+    <footer className="bg-primary text-white pt-12 pb-4 px-4 mt-auto">
       <div className="flex flex-col items-center">
         {/* Logo */}
         <Image src={logo} alt="Logo" width={200} height={150} className="mb-4" />
