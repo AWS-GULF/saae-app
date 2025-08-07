@@ -299,7 +299,7 @@ export function Navbar() {
                         // height={80}
                         className="lg:w-[245px] lg:h-[80px] sm:w-[150px] h-[80px]"
                     />
-                    <NavigationMenuList className="" key={pathname}>
+                    <NavigationMenuList className={`${locale==="ar" && "flex-row-reverse flex"}`} key={pathname}>
                         <NavigationMenuItem>
                             <NavigationMenuLink asChild className="bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent">
                                 <Link href="/" className={`lg:px-4 sm:px-2 py-2 rounded-none sm:text-[10px] md:text-[10px] xl:text-base  font-medium transition-colors duration-200 bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent ${pathname === "/" ? "text-purple-600" : "text-black"}`}>{t('home')}</Link>

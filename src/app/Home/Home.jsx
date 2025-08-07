@@ -1,6 +1,6 @@
 
 
-import  Hero  from '@/components/ui/Hero'
+import  Hero  from '@/app/Home/ui/Hero'
 import React from 'react'
 
 export default function HomeContent() {
