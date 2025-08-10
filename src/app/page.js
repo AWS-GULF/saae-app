@@ -4,6 +4,7 @@ import Image from "next/image";
 import HomeContent from "./Home/Home";
 import About from "./Home/ui/about";
 import SaeeNumbers from "./Home/ui/SaeeNumbers";
+import WhatWeCan from "./Home/ui/WhatWeCan";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
 <HomeContent/>
 <About/>
 <SaeeNumbers/>
+<WhatWeCan/>
    
     </div>
   );
