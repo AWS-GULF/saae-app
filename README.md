@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+-------------------------
+## Getting Start
+>>>>>>> e0ee7219ef67c6780c4ecb53a8aff23686f29240
 
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
