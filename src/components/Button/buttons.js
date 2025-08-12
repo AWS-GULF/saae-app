@@ -51,7 +51,7 @@ export const BackToHomeButton = ({ href = "#", children }) => {
     </Link>
   );
 };
-export const LargeButton = ({ href = "#", children }) => {
+export const LargeButton = ({ href = "#", children, img }) => {
   const { t } = useLanguage();
   return (
     <Link
@@ -59,6 +59,26 @@ export const LargeButton = ({ href = "#", children }) => {
       className="cursor-pointer w-[300px] leading-32  h-[64px] border-2 bg-secondary border-secondary rounded-2xl flex gap-4 justify-center items-center"
     >
       <span className="text-xl font-bold text-white ">{children || t('button_request_consultation')}</span>
+
+      {img && <Image src={img} alt="arrow right" />}
+
+
+    </Link>
+  );
+};
+
+
+export const ServiceButton = ({ href = "#", children, img }) => {
+  const { t } = useLanguage();
+  return (
+    <Link
+      href={href}
+      className="cursor-pointer lg:w-[400px] w-[320px] leading-32  h-[64px] border-2 bg-secondary border-secondary rounded-2xl flex gap-4 justify-center items-center"
+    >
+      <span className="text-xl font-bold text-white ">{children || t('button_request_consultation')}</span>
+
+      {img && <Image src={img} alt="arrow right" />}
+
 
     </Link>
   );

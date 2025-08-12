@@ -12,60 +12,85 @@ import RiskManagment from "@/Assets/images/RiskManagment.svg"
 import marketingIntelligence from "@/Assets/images/marketingIntelligence.svg"
 import organizationDesign from "@/Assets/images/organizationDesign.svg"
 import financialAdvisory from "@/Assets/images/financialAdvisory.svg"
+import newInvestor from "@/Assets/images/newInvestor.svg"
+import last from "@/Assets/images/last.svg"
 import sales from "@/Assets/images/sales.svg"
 import { RegularButtonSecondaryBg } from '@/components/Button/buttons'
 import Image from 'next/image'
 import { useLanguage } from '@/hooks/useLanguage'
+import Link from 'next/link'
 
 export default function Services() {
   const { t } = useLanguage();
 
   const servicesData = [
     {
+      id: "strategic-planning",
       img: stratrgicPlanning,
       title: t('services_strategic_planning_title'),
       desc: t('services_strategic_planning_desc'),
     },
     {
+      id: "risk-management",
       img: RiskManagment,
       title: t('services_risk_management_title'),
       desc: t('services_risk_management_desc'),
     },
     {
+      id: "corporate-governance",
       img: Gover,
       title: t('services_corporate_governance_title'),
       desc: t('services_corporate_governance_desc'),
     },
     {
+      id: "organization-design",
       img: organizationDesign,
       title: t('services_organization_design_title'),
       desc: t('services_organization_design_desc'),
     },
     {
+      id: "marketing-intelligence-digital-marketing",
       img: marketingIntelligence,
       title: t('services_marketing_intelligence_title'),
       desc: t('services_marketing_intelligence_desc'),
     },
     {
+      id: "digital-transformation",
       img: digitealTrans,
       title: t('services_digital_transformation_title'),
       desc: t('services_digital_transformation_desc'),
     },
     {
+      id: "sales-development",
       img: sales,
       title: t('services_sales_development_title'),
       desc: t('services_sales_development_desc'),
     },
     {
+      id: "financial-advisory-consultation",
       img: financialAdvisory,
       title: t('services_financial_advisory_title'),
       desc: t('services_financial_advisory_desc'),
     },
     {
+      id: "human-resource-consulting",
       img: hrCons,
       title: t('services_hr_consulting_title'),
       desc: t('services_hr_consulting_desc'),
     },
+    {
+      id: "New-Investor-Services",
+      img: newInvestor,
+      title: "New Investor Services",
+      desc: "SAEE streamlines market entry with full setup, compliance, and local support.",
+    },
+    {
+      id: "Industrial-Services-Studies",
+      img: last,
+      title: "Industrial Services & Studies",
+      desc: "SAEE improves industrial performance with lean systems, data insights, and process optimization.",
+    },
+    
   ];
   return (
     <div>
@@ -111,7 +136,7 @@ export default function Services() {
                 </h3>
                 <p className="   mb-6 text-[22px] h-[200px]">{service.desc}</p>
                 <div className='m-auto'>
-                  <RegularButtonSecondaryBg text={t('button_explore_more')} />
+                  <RegularButtonSecondaryBg href={`/services/${service.id}`} text={t('button_explore_more')} />
                 </div>
               </div>
             </div>
