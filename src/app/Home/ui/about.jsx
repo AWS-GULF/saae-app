@@ -16,11 +16,11 @@ export default function About() {
         <div className="flex flex-col lg:flex-row items-start justify-center gap-10 ">
           {/* Text Content */}
           <div className="lg:w-3/4 ">
-            <h2 className="text-base sm:text-2xl lg:text-4xl font-bold leading-tight mb-2 ">
+            <h2 className="text-2xl lg:text-3xl font-bold leading-tight mb-2 ">
               {t('about_saee_title')}
             </h2>
             
-            <p className="lg:text-[28px] sm:text-xl text-xl font-[500]   leading-[42px] mb-8 text-justify">
+            <p className="lg:text-[28px] sm:text-xl text-[21px]  font-[500]   leading-[42px] mb-8">
               {t('about_saee_desc')}
             </p>
             <div className='flex justify-center sm:justify-start'>

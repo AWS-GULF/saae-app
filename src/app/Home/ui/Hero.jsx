@@ -53,11 +53,13 @@ export default function Hero() {
                                 priority
                             />
                             <div className="absolute inset-0 bg-[linear-gradient(0deg,_rgba(118,72,149,0.4)_0%,_rgba(118,72,149,0.4)_100%)]"></div>
-                            <div className='absolute left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2  w-full'>
-                                <div className="flex  w-full justify-center items-center flex-col ">
-                                    <h1 className='font-bold text-base sm:text-[28px] lg:text-[40px] text-white pb-6 text-center '>{t('hero_slide1_title')}</h1>
-                                   <p className='font-normal  lg:text-3xl text-base sm:text-[20px]  text-white pb-10 text-center w-[400px] sm:w-[600px] lg:w-full'>{t('hero_slide1_desc')}</p>
-                                       <div className="flex gap-4 flex-col sm:flex-row justify-center items-center">
+                            <div className='absolute left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2  w-full px-4 sm:px-6 lg:px-8'>
+                                <div className="flex   w-full justify-center items-center flex-col h-[300px] md:h-[350px] lg:h-[400px] ">
+                                    <div className="flex-1 flex flex-col justify-center items-center">
+                                        <h1 className='font-bold text-base sm:text-[28px] lg:text-[40px] text-white pb-4 sm:pb-6 text-center'>{t('hero_slide1_title')}</h1>
+                                        <p className='font-normal lg:text-3xl text-base sm:text-[20px] text-white text-center w-full max-w-[350px] sm:max-w-[600px] lg:max-w-full px-2 sm:px-0'>{t('hero_slide1_desc')}</p>
+                                    </div>
+                                    <div className="flex gap-3 sm:gap-4 flex-col sm:flex-row justify-center items-center">
                                         <LargeButton />
                                         <RegularButtonWhiteBg />
                                     </div>
@@ -76,11 +78,13 @@ export default function Hero() {
                                 sizes="100vw"
                             />
                             <div className="absolute inset-0 bg-[linear-gradient(0deg,_rgba(118,72,149,0.4)_0%,_rgba(118,72,149,0.4)_100%)]"></div>
-     <div className='absolute left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2  w-full'>
-                                <div className="flex  w-full justify-center items-center flex-col ">
-                                    <h1 className='font-bold text-base sm:text-[28px] lg:text-[40px] text-white pb-6 text-center '>{t('hero_slide2_title')}</h1>
-                                   <p className='font-normal w-[400px] sm:w-[500px] lg:w-[900px] xl:w-full lg:text-3xl text-base sm:text-[20px]    text-white pb-10 text-center leading-10 '>{t('hero_slide2_desc')}</p>
-                                      <div className="flex gap-4 flex-col sm:flex-row justify-center items-center">
+     <div className='absolute left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2  w-full px-4 sm:px-6 lg:px-8'>
+                                <div className="flex  w-full justify-center items-center flex-col h-[300px] md:h-[350px] lg:h-[400px]  ">
+                                    <div className="flex-1 flex flex-col justify-center items-center">
+                                        <h1 className='font-bold text-base sm:text-[28px] lg:text-[40px] text-white pb-4 sm:pb-6 text-center'>{t('hero_slide2_title')}</h1>
+                                        <p className='font-normal w-full max-w-[350px] sm:max-w-[500px] lg:max-w-[900px] xl:max-w-full lg:text-3xl text-base sm:text-[20px] text-white text-center leading-8 sm:leading-10 px-2 sm:px-0'>{t('hero_slide2_desc')}</p>
+                                    </div>
+                                    <div className="flex gap-3 sm:gap-4 flex-col sm:flex-row justify-center items-center">
                                         <LargeButton />
                                         <RegularButtonWhiteBg />
                                     </div>
@@ -101,11 +105,13 @@ export default function Hero() {
                                 sizes="100vw"
                             />
                             <div className="absolute inset-0 bg-[linear-gradient(0deg,_rgba(118,72,149,0.3)_0%,_rgba(118,72,149,0.7)_100%)]"></div>
-     <div className='absolute left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2  w-full'>
-                                <div className="flex  w-full justify-center items-center flex-col ">
-                                    <h1 className='font-bold text-base sm:text-[28px] lg:text-[40px] text-white pb-6 text-center '>{t('hero_slide3_title')}</h1>
-                                   <p className='font-normal w-[400px] sm:w-[500px] lg:w-[900px] xl:w-full lg:text-3xl text-base sm:text-[20px]    text-white pb-10 text-center leading-10 '>{t('hero_slide3_desc')}</p>
-                                    <div className="flex gap-4 flex-col sm:flex-row justify-center items-center">
+     <div className='absolute left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2  w-full px-4 sm:px-6 lg:px-8'>
+                                <div className="flex  w-full justify-center items-center flex-col h-[300px] md:h-[350px] lg:h-[400px] justify-between">
+                                    <div className="flex-1 flex flex-col justify-center  items-center">
+                                        <h1 className='font-bold text-base sm:text-[28px] lg:text-[40px] text-white pb-4 sm:pb-6 text-center'>{t('hero_slide3_title')}</h1>
+                                        <p className='font-normal w-full max-w-[350px] sm:max-w-[500px] lg:max-w-[900px] xl:max-w-full lg:text-3xl text-base sm:text-[20px] text-white text-center leading-8 sm:leading-10 px-2 sm:px-0'>{t('hero_slide3_desc')}</p>
+                                    </div>
+                                    <div className="flex gap-3 sm:gap-4 flex-col sm:flex-row justify-center items-center">
                                         <LargeButton />
                                         <RegularButtonWhiteBg />
                                     </div>
@@ -115,10 +121,10 @@ export default function Hero() {
                     </CarouselItem>
                 </CarouselContent>
                 {showPrevious && (
-                    <CarouselPrevious className={`${dir === 'rtl' ? 'right-4' : 'left-4'} top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 border-0 shadow-lg`} />
+                    <CarouselPrevious className={`${dir === 'rtl' ? 'right-8' : 'left-8'} top-[55%] sm:top-[52%] lg:top-[58%] -translate-y-1/2 bg-white/20 hover:bg-white/40 text-gray-800 border-0 shadow-lg`} />
                 )}
                 {showNext && (
-                    <CarouselNext className={`${dir === 'rtl' ? 'left-4' : 'right-4'} top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 border-0 shadow-lg`} />
+                    <CarouselNext className={`${dir === 'rtl' ? 'left-8' : 'right-8'} top-[55%] sm:top-[52%] lg:top-[58%] -translate-y-1/2 bg-white/20 hover:bg-white/40 text-gray-800 border-0 shadow-lg`} />
                 )}
             </Carousel>
         </div>

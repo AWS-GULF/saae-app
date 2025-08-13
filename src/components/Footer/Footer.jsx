@@ -25,10 +25,10 @@ export default function Footer() {
 
         {/* Social Icons */}
         <div className="flex gap-4 sm:mb-4 mb-2 ">
-          <Link href="#" aria-label="Facebook">
+          <Link href="https://www.facebook.com/profile.php?id=61577985857593" target="_blank" aria-label="Facebook">
             <Image src={facebook} alt="Facebook" width={24} height={24} />
           </Link>
-          <Link href="#" aria-label="WhatsApp">
+          <Link href="https://www.facebook.com/profile.php?id=61577985857593" target="_blank" aria-label="WhatsApp">
             <Image src={whatsapp} alt="WhatsApp" width={24} height={24} />
           </Link>
           <Link href="#" aria-label="Telegram">

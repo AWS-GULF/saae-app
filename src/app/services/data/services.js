@@ -69,896 +69,738 @@ import algorithmWhite from "@/Assets/icons/algorithmWhite.svg"
 import earthWhite from "@/Assets/icons/earthWhite.svg"
 import homeWhite from "@/Assets/icons/homeWhite.svg"
 import ss from "@/Assets/icons/ss.svg"
+// araibic
+import sr1Ar from "@/Assets/images/sr1Ar.svg"
+import sr2Ar from "@/Assets/images/sr2Ar.svg"
+import sr3Ar from "@/Assets/images/sr3Ar.svg"
+import sr4Ar from "@/Assets/images/sr4Ar.svg"
+import sr5Ar from "@/Assets/images/sr5Ar.svg"
+import sr6Ar from "@/Assets/images/sr6Ar.svg"
+import sr7Ar from "@/Assets/images/sr7Ar.svg"
+import sr8Ar from "@/Assets/images/sr8Ar.svg"
+import sr9Ar from "@/Assets/images/sr9Ar.svg"
+import sr10Ar from "@/Assets/images/sr10Ar.svg"
+import sr11Ar from "@/Assets/images/sr11Ar.svg"
+
+
 
 export const services = [
     {
         id: "strategic-planning",
-        title: "Strategic Planning",
-        question: "Why Strategic Planning with SAEE?",
-        description:
-            "At SAEE, we don’t just create strategies we bring them to life. We work side by side with your leadership team to align today’s reality with tomorrow’s ambition through actionable, measurable planning systems.",
-        button: "Request a Strategy Consultation",
-        longDescription: "In today’s complex environment, organizations need strategies that are realistic, adaptive, and implementation ready. SAEE helps build integrated strategies based on rigorous analysis, internal alignment, and clearly defined execution frameworks. Our goal is to translate strategic thinking into measurable results.",
-
-
+        title: "strategic_planning",
+        question: "why_strategic_planning",
+        description: "strategic_planning_description",
+        button: "request_strategy_consultation",
+        longDescription: "strategic_planning_long_description",
         deliveryElements: [
             {
                 icon: earth,
-                title: "Environmental Scanning ",
-                description: "Market trends, risks, and internal capabilities all mapped for informed decisions."
+                title: "environmental_scanning",
+                description: "environmental_scanning_desc"
             },
             {
                 icon: compass,
-                title: "Resource Mapping",
-                description: "Aligning people, systems, and assets to strategic goals."
+                title: "resource_mapping",
+                description: "resource_mapping_desc"
             },
             {
                 icon: goal,
-                title: "Strategy Setup",
-                description: "Clear vision, mission, values, goals, and initiatives with measurable alignment."
+                title: "strategy_setup",
+                description: "strategy_setup_desc"
             },
             {
                 icon: chart,
-                title: "Balanced Scorecard & KPIs",
-                description: "Track performance across finance, customer, operations, and growth."
+                title: "balanced_scorecard_kpis",
+                description: "balanced_scorecard_kpis_desc"
             },
             {
                 icon: market,
-                title: "Performance Dashboards",
-                description: "Real-time dashboards to monitor progress and guide leadership decisions."
+                title: "performance_dashboards",
+                description: "performance_dashboards_desc"
             }
-
         ],
         benefits: [
-            "Converts strategic vision into day-to-day operational action",
-            "Enhances planning efficiency and cross-departmental coordination",
-            "Supports executive alignment and governance",
-            "Improves transparency and performance tracking",
-            "Aligns with Saudi Vision 2030 priorities"
+            "strategic_planning_benefit_1",
+            "strategic_planning_benefit_2",
+            "strategic_planning_benefit_3",
+            "strategic_planning_benefit_4",
+            "strategic_planning_benefit_5"
         ],
-
         recievElements: [
             {
                 icon: document,
-                title: "Full strategic planning Document"
+                title: "full_strategic_planning_document"
             },
             {
                 icon: simplification,
-                title: "Balanced Scorecard model and KPIs",
-
+                title: "balanced_scorecard_model_kpis",
             },
             {
                 icon: folder,
-                title: "Operational roadmap with clear milestones",
-
+                title: "operational_roadmap_milestones",
             },
             {
                 icon: screen,
-                title: "Custom performance dashboard setup",
-
+                title: "custom_performance_dashboard",
             }
-
         ],
         servicePc: service1pc,
-        serviceMob: service1mob,
+        servicePcAr: sr1Ar,
         image: stratrgicPlanning,
         sectionImage: sr1
     },
     {
         id: "risk-management",
-        title: "risk-management",
-        question: "Why Risk Management with SAEE?",
-        description:
-            "At SAEE, we help you take control of risk before it takes control of you. We partner with your team to identify threats, assess vulnerabilities, and build systems that turn uncertainty into structured resilience.",
-        button: "Request a Risk Consultation",
-        longDescription: "You can’t eliminate risk, but you can manage it. We help organizations develop practical risk systems that are proactive, not reactive. Our approach combines diagnostics, planning, and cultural change to strengthen operational resilience.",
-
+        title: "risk_management",
+        question: "why_risk_management",
+        description: "risk_management_description",
+        button: "request_risk_consultation",
+        longDescription: "risk_management_long_description",
 
         deliveryElements: [
-
             {
                 icon: compass,
-                title: "Risk Maturity Assessment",
-                description: "Evaluate current risk practices, identify gaps, and build a stronger foundation."
+                title: "risk_maturity_assessment",
+                description: "risk_maturity_assessment_desc"
             },
             {
                 icon: shield,
-                title: "Risk Mitigation Plan",
-                description: "Analyze key risks by likelihood and impact, then design targeted prevention and contingency actions."
+                title: "risk_mitigation_plan",
+                description: "risk_mitigation_plan_desc"
             },
             {
                 icon: docs,
-                title: "ISO 31000 Framework",
-                description: "Implement structured, standardized risk systems to meet compliance and build stakeholder trust."
+                title: "iso_31000_framework",
+                description: "iso_31000_framework_desc"
             },
-
             {
                 icon: goal,
-                title: "Awareness Training & Coaching",
-                description: "Train leaders and teams to think and act with risk in mind—every day, not just during crises."
+                title: "awareness_training_coaching",
+                description: "awareness_training_coaching_desc"
             },
-
-
         ],
         benefits: [
-            "Identifies hidden threats before they impact operations",
-            "Establishes clear, structured risk systems",
-            "Builds organizational preparedness and continuity",
-            "Aligns with compliance and governance standards",
-            "Increases investor confidence and stakeholder trust"
+            "risk_management_benefit_1",
+            "risk_management_benefit_2",
+            "risk_management_benefit_3",
+            "risk_management_benefit_4",
+            "risk_management_benefit_5"
         ],
-
-
-        servicePc: sr2,
-        image: RiskManagment,
-        sectionImage: secServ2
-
-
-        , recievElements: [
-
+        recievElements: [
             {
                 icon: simplification,
-                title: "Full risk assessment report and maturity index",
-
+                title: "full_risk_assessment_report",
             },
             {
                 icon: document,
-                title: "Custom risk register and mitigation plan",
-
+                title: "custom_risk_register",
             },
             {
                 icon: shieldWhite,
-                title: "ISO 31000-aligned risk framework",
-
-            }
-            , {
+                title: "iso_31000_aligned_framework",
+            },
+            {
                 icon: targetWhite,
-                title: "Awareness training program and coaching toolkit",
-
+                title: "awareness_training_program",
             }
         ],
+        servicePc: sr2,
+        image: RiskManagment,
+        sectionImage: secServ2,
+        servicePcAr: sr2Ar
+
     },
     {
         id: "corporate-governance",
         image: Gover,
-        title: "Corporate Governance",
-        button: "Request a Governance Consultation",
-        question: "Why Corporate Governance with SAEE?",
-        description:
-            "At SAEE, we help you go beyond compliance. We design governance systems that drive accountability, clarify roles, and support ethical, high-performing leadership.",
-        longDescription: "Good governance builds strong organizations.We help you put in place practical frameworks that align with regulations, reflect best practices, and improve decision-making.Our work strengthens leadership structures and boosts stakeholder confidence.",
+        title: "corporate_governance",
+        button: "request_governance_consultation",
+        question: "why_corporate_governance",
+        description: "corporate_governance_description",
+        longDescription: "corporate_governance_long_description",
         servicePc: govServiceImg,
-
         sectionImage: sr3,
-
+        servicePcAr: sr3Ar,
         deliveryElements: [
-
             {
                 icon: banking,
-                title: "Governance Practices Review",
-                description: "Evaluate current governance systems, identify gaps, and recommend improvements."
+                title: "governance_practices_review",
+                description: "governance_practices_review_desc"
             },
             {
                 icon: book,
-                title: "Governance Manual",
-                description: "Develop customized manuals that guide policies, ethics, and decision-making."
+                title: "governance_manual",
+                description: "governance_manual_desc"
             },
             {
                 icon: docs,
-                title: "Board Policies & Procedures",
-                description: "Define board roles, meeting protocols, approval workflows, and evaluation methods."
+                title: "board_policies_procedures",
+                description: "board_policies_procedures_desc"
             },
-
             {
                 icon: key,
-                title: "Delegation of Authority (DoA)",
-                description: "Design a clear decision-making matrix to improve efficiency and reduce risk."
+                title: "delegation_of_authority",
+                description: "delegation_of_authority_desc"
             },
             {
                 icon: casee,
-                title: "Board Compensation Frameworks",
-                description: "Set fair, performance-based rewards that attract and retain qualified board members."
+                title: "board_compensation_frameworks",
+                description: "board_compensation_frameworks_desc"
             },
             {
                 icon: code,
-                title: "Board Code of Conduct",
-                description: "Establish clear ethical guidelines covering integrity, accountability, and professionalism."
+                title: "board_code_of_conduct",
+                description: "board_code_of_conduct_desc"
             },
-
-
         ],
         benefits: [
-            "Clarifies leadership roles and responsibilities",
-            "Strengthens regulatory compliance",
-            "Enhances decision-making transparency",
-            "Builds trust with investors and stakeholders",
-            "Supports long-term organizational integrity",
-
+            "corporate_governance_benefit_1",
+            "corporate_governance_benefit_2",
+            "corporate_governance_benefit_3",
+            "corporate_governance_benefit_4",
+            "corporate_governance_benefit_5",
         ],
-
         recievElements: [
-
-
             {
                 icon: document,
-                title: "Governance assessment report",
-
+                title: "governance_assessment_report",
             },
             {
                 icon: bookWhite,
-                title: "Custom governance manual",
-
-            }
-            , {
+                title: "custom_governance_manual",
+            },
+            {
                 icon: folder,
-                title: "Full board policy set",
-
-            }
-            , {
+                title: "full_board_policy_set",
+            },
+            {
                 icon: simplification,
-                title: "Delegation of Authority matrix",
-
-            }
-            , {
+                title: "delegation_authority_matrix",
+            },
+            {
                 icon: codeWhite,
-                title: "Code of Conduct document",
-
-            }
-            , {
+                title: "code_of_conduct_document",
+            },
+            {
                 icon: caseWhite,
-                title: "Compensation and rewards structure",
-
+                title: "compensation_rewards_structure",
             }
-
         ],
-
     },
     {
         id: "organization-design",
         image: organizationDesign,
-        title: "organization-design",
-        button: "Request an Organization Design Consultation",
-        question: "Why Organization Design with SAEE?",
-        description:
-            "At SAEE, we help you design structures that work.We align your organization to your goals, simplify workflows, and build systems that adapt and scale with your growth.",
-        longDescription: "Your structure shapes your results. We help you create an organization that’s clear, efficient, and ready for change. Our work is grounded in international models and local market realities.",
+        title: "organization_design",
+        button: "request_organization_design_consultation",
+        question: "why_organization_design",
+        description: "organization_design_description",
+        longDescription: "organization_design_long_description",
         sectionImage: sr4,
-        servicePc: orgImg,
-
-
+        servicePc: orgImg, 
+        servicePcAr: sr4Ar,
         deliveryElements: [
-
             {
                 icon: chart,
-                title: "Organizational Structuring",
-                description: "Apply global models like EPRG to design local, regional, or global structures."
+                title: "organizational_structuring",
+                description: "organizational_structuring_desc"
             },
             {
                 icon: optimization,
-                title: "Business Process Reengineering",
-                description: "Analyze and redesign workflows to cut waste, adopt tech, and raise productivity."
+                title: "business_process_reengineering",
+                description: "business_process_reengineering_desc"
             },
             {
                 icon: docs,
-                title: "Job Reengineering & Evaluation",
-                description: "Define roles, responsibilities, and grading systems to ensure fairness and alignment. Includes job"
+                title: "job_reengineering_evaluation",
+                description: "job_reengineering_evaluation_desc"
             },
-
-
             {
                 icon: book,
-                title: "Standard Operating Procedures ",
-                description: "Develop clear SOPs that standardize operations, support compliance, and improve knowledge sharing."
+                title: "standard_operating_procedures",
+                description: "standard_operating_procedures_desc"
             },
-
-
         ],
         benefits: [
-            "Aligns structure with strategy",
-            "Increases efficiency and agility",
-            "Clarifies roles and decision-making",
-            "Enables growth and transformation",
-            "Supports talent development and retention",
-
+            "organization_design_benefit_1",
+            "organization_design_benefit_2",
+            "organization_design_benefit_3",
+            "organization_design_benefit_4",
+            "organization_design_benefit_5",
         ],
-
         recievElements: [
             {
                 icon: simplification,
-                title: "Organizational structure blueprint",
-
-            }
-            , {
+                title: "organizational_structure_blueprint",
+            },
+            {
                 icon: optWhite,
-                title: "Reengineered processes and SOPs",
-
-            }
-            , {
+                title: "reengineered_processes_sops",
+            },
+            {
                 icon: document,
-                title: "Updated job descriptions and grading system",
-
-            }
-            , {
+                title: "updated_job_descriptions",
+            },
+            {
                 icon: roadmap,
-                title: "Implementation roadmap",
-
+                title: "implementation_roadmap",
             }
-
         ],
     },
     {
         id: "marketing-intelligence-digital-marketing",
         image: marketingIntelligence,
-        title: "Marketing Intelligence & Digital Marketing",
-        button: "Request a Marketing Consultation ",
-        question: "Why Marketing Intelligence with SAEE?",
-        description: "At SAEE, we help you understand your market and connect with it.We combine research and digital execution to drive growth, improve positioning, and create measurable impact.",
-        longDescription: "Growth starts with insight.We help you analyze your market, shape your message, and reach your audience with precision. Our strategies are data-backed and execution-ready.",
+        title: "marketing_intelligence",
+        button: "request_marketing_consultation",
+        question: "why_marketing_intelligence",
+        description: "marketing_intelligence_description",
+        longDescription: "marketing_intelligence_long_description",
         sectionImage: marImg,
         servicePc: sr5,
-
-
+         servicePcAr: sr5Ar,
         deliveryElements: [
-
             {
                 icon: chart,
-                title: "Market Intelligence",
-                description: "Research your market, customers, and competitors to find trends and reduce uncertainty."
+                title: "market_intelligence",
+                description: "market_intelligence_desc"
             },
             {
                 icon: goal,
-                title: "Marketing Strategy Setup",
-                description: "Build a clear strategy aligned with your goals—positioning, messaging, and campaign planning based on market insights."
+                title: "marketing_strategy_setup",
+                description: "marketing_strategy_setup_desc"
             },
             {
                 icon: screenPurple,
-                title: "Digital Marketing Execution",
-                description: "Run full-funnel campaigns—SEO, content, ads, social media, and websites—with measurable results."
+                title: "digital_marketing_execution",
+                description: "digital_marketing_execution_desc"
             },
-
-
-
-
-
         ],
         benefits: [
-            "Informs decisions with real market data",
-            "Aligns marketing with business goals",
-            "Improves lead generation and conversion",
-            "Builds a digital presence that reflects your brand",
-            "Supports fast, insight-led market entry",
+            "marketing_intelligence_benefit_1",
+            "marketing_intelligence_benefit_2",
+            "marketing_intelligence_benefit_3",
+            "marketing_intelligence_benefit_4",
+            "marketing_intelligence_benefit_5",
         ],
-
         recievElements: [
             {
                 icon: simplification,
-                title: "Market research report and analysis",
-
-            }
-            , {
+                title: "market_research_report",
+            },
+            {
                 icon: targetWhite,
-                title: "Full marketing strategy document",
-
-            }
-            , {
+                title: "full_marketing_strategy",
+            },
+            {
                 icon: screen,
-                title: "Website and digital assets",
-
-            }
-            , {
+                title: "website_digital_assets",
+            },
+            {
                 icon: document,
-                title: "ICampaign execution and performance reports",
-
+                title: "campaign_execution_reports",
             }
-
         ],
     },
     {
         id: "digital-transformation",
         image: digitealTrans,
-        title: "Digital Transformation",
-        button: " Digital Transformation Consultation ",
-        question: "Why Digital Transformation with SAEE?",
-        description: "At SAEE, we help you understand your market and connect with it.We combine research and digital execution to drive growth, improve positioning, and create measurable impact.",
-        longDescription: "Digital transformation isn’t about tools. It’s about how you use them. We help you modernize operations, improve agility, and unlock value through targeted, practical tech solutions.",
+        title: "digital_transformation",
+        button: "digital_transformation_consultation",
+        question: "why_digital_transformation",
+        description: "digital_transformation_description",
+        longDescription: "digital_transformation_long_description",
         sectionImage: dsImg,
         servicePc: sr6,
-
-
+         servicePcAr: sr6Ar,
         deliveryElements: [
-
             {
                 icon: chart,
-                title: "Digital Maturity Diagnosis",
-                description: "Assess your current digital systems, culture, and workflows to define the right roadmap."
+                title: "digital_maturity_diagnosis",
+                description: "digital_maturity_diagnosis_desc"
             },
             {
                 icon: screenPurple,
-                title: "System Architecture Design",
-                description: "Build scalable, secure digital platforms for web, mobile, or desktop—tailored to your business goals."
+                title: "system_architecture_design",
+                description: "system_architecture_design_desc"
             },
             {
                 icon: market,
-                title: "Data Infrastructure & Management",
-                description: "Design and manage data environments to support reporting, analytics, and decision-making."
+                title: "data_infrastructure_management",
+                description: "data_infrastructure_management_desc"
             },
             {
                 icon: algorithm,
-                title: "Generative AI Integration",
-                description: "Deploy AI tools to improve content creation, automate tasks, or enhance service delivery."
+                title: "generative_ai_integration",
+                description: "generative_ai_integration_desc"
             },
             {
                 icon: hammer,
-                title: "Technology Needs Assessment",
-                description: "Evaluate and align your tech stack ERP, CRM, cloud with operational priorities and growth needs."
+                title: "technology_needs_assessment",
+                description: "technology_needs_assessment_desc"
             },
-
-
-
-
-
         ],
         benefits: [
-            "Increases operational efficiency",
-            "Builds systems for growth and scale",
-            "Improves decision-making with better data",
-            "Supports innovation using AI and automation",
-            "Aligns tech investments with real business needs",
+            "digital_transformation_benefit_1",
+            "digital_transformation_benefit_2",
+            "digital_transformation_benefit_3",
+            "digital_transformation_benefit_4",
+            "digital_transformation_benefit_5",
         ],
-
         recievElements: [
             {
                 icon: document,
-                title: "Digital readiness report",
-
+                title: "digital_readiness_report",
             },
             {
                 icon: screen,
-                title: "Scalable system architecture",
-
-            }
-            , {
+                title: "scalable_system_architecture",
+            },
+            {
                 icon: simplification,
-                title: "Data infrastructure blueprint",
-
-            }
-            , {
+                title: "data_infrastructure_blueprint",
+            },
+            {
                 icon: algorithmWhite,
-                title: "AI integration plan",
-
-            }
-            , {
+                title: "ai_integration_plan",
+            },
+            {
                 icon: roadmap,
-                title: "Technology implementation roadmap",
-
+                title: "technology_implementation_roadmap",
             }
-
         ],
     },
     {
         id: "sales-development",
         image: sales,
-        title: "Sales Development",
-        button: " Request a Sales Development Consultation ",
-        question: "Why Sales Development with SAEE?",
-        description: "At SAEE, we help you grow sales with structure and strategy.We design sales systems that improve targeting, boost conversion, and align pricing with value.",
-        longDescription: "Sales growth needs more than effort—it needs direction.We combine strategy, analytics, and pricing to build scalable, results-driven sales models.",
+        title: "sales_development",
+        button: "request_sales_development_consultation",
+        question: "why_sales_development",
+        description: "sales_development_description",
+        longDescription: "sales_development_long_description",
         sectionImage: salesImg,
         servicePc: sr7,
-
-
+         servicePcAr: sr7Ar,
         deliveryElements: [
-
             {
                 icon: goal,
-                title: "Sales Strategy Development",
-                description: "Build targeted strategies for outreach, territory management, and pipeline growth."
+                title: "sales_strategy_development",
+                description: "sales_strategy_development_desc"
             },
             {
                 icon: chart,
-                title: "Performance Analytics & Sales Enablement",
-                description: "Set KPIs and dashboards to track performance and guide decisions."
+                title: "performance_analytics_sales_enablement",
+                description: "performance_analytics_sales_enablement_desc"
             },
-
             {
                 icon: pricing,
-                title: "Pricing Structure Optimization",
-                description: "Design pricing models that balance market fit, margins, and buyer behavior."
+                title: "pricing_structure_optimization",
+                description: "pricing_structure_optimization_desc"
             },
-
-
-
-
-
-
         ],
         benefits: [
-            "Increases lead conversion and deal velocity",
-            "Aligns sales efforts with business goals",
-            "Improves pricing to support margin growth",
-            "Enables data-driven sales decisions",
-            "Supports entry into new markets"
+            "sales_development_benefit_1",
+            "sales_development_benefit_2",
+            "sales_development_benefit_3",
+            "sales_development_benefit_4",
+            "sales_development_benefit_5"
         ],
-
         recievElements: [
             {
                 icon: document,
-                title: "Sales strategy blueprint",
-
+                title: "sales_strategy_blueprint",
             },
             {
                 icon: roadmap,
-                title: "Outreach and territory plan",
-
+                title: "outreach_territory_plan",
             },
             {
                 icon: simplification,
-                title: "Sales performance dashboard",
-
+                title: "sales_performance_dashboard",
             },
             {
                 icon: pricingWhite,
-                title: "Pricing framework and model",
-
+                title: "pricing_framework_model",
             }
-
         ],
     },
     {
         id: "financial-advisory-consultation",
         image: financialAdvisory,
-        title: "Financial Advisory & Consultation",
-        button: " Request a Financial Consultation ",
-        question: "Why Financial Advisory with SAEE?",
-        description: "At SAEE, we help you take control of your finances.We provide end-to-end advisory that improves compliance, reduces risk, and enables confident financial planning.",
-        longDescription: "Sound financial management drives sustainable growth. We support you with structured, compliant, and insight-driven systems that improve visibility and control across all financial areas.",
+        title: "financial_advisory",
+        button: "request_financial_consultation",
+        question: "why_financial_advisory",
+        description: "financial_advisory_description",
+        longDescription: "financial_advisory_long_description",
         sectionImage: financialImg,
         servicePc: sr8,
-
-
+         servicePcAr: sr8Ar,
         deliveryElements: [
-
             {
                 icon: book,
-                title: "Accounting and Tax Advisory",
-                description: "Ensure compliance, improve reporting, and optimize tax efficiency."
+                title: "accounting_tax_advisory",
+                description: "accounting_tax_advisory_desc"
             },
             {
                 icon: chart,
-                title: "Actuarial Valuation",
-                description: "Use models to assess future liabilities like pensions and insurance risk."
+                title: "actuarial_valuation",
+                description: "actuarial_valuation_desc"
             },
-
             {
                 icon: docs,
-                title: "Business Continuity Planning (BCP)",
-                description: "Develop financial risk plans to maintain operations during disruptions."
+                title: "business_continuity_planning",
+                description: "business_continuity_planning_desc"
             },
             {
                 icon: code,
-                title: "IFRS Implementation ",
-                description: "Support smooth adoption and integration of international reporting standards."
+                title: "ifrs_implementation",
+                description: "ifrs_implementation_desc"
             },
             {
                 icon: folderPurple,
-                title: "Financial Planning & Analysis (FP&A)",
-
-                description: "Build budgeting, forecasting, and reporting systems for better planning."
+                title: "financial_planning_analysis",
+                description: "financial_planning_analysis_desc"
             },
-
-
-
-
-
-
         ],
         benefits: [
-            "Strengthens financial control and planning",
-            "Ensures tax and regulatory compliance",
-            "Reduces financial risks and uncertainty",
-            "Enhances transparency for stakeholders",
-            "Supports long-term performance"
-
+            "financial_advisory_benefit_1",
+            "financial_advisory_benefit_2",
+            "financial_advisory_benefit_3",
+            "financial_advisory_benefit_4",
+            "financial_advisory_benefit_5"
         ],
-
         recievElements: [
             {
                 icon: bookWhite,
-                title: "Tax and accounting compliance review",
-
+                title: "tax_accounting_compliance",
             },
             {
                 icon: document,
-                title: "Valuation and liability reports",
-
+                title: "valuation_liability_reports",
             },
             {
                 icon: folder,
-                title: "Business continuity risk plan",
-
+                title: "business_continuity_risk_plan",
             },
             {
                 icon: codeWhite,
-                title: "IFRS implementation guide",
-
+                title: "ifrs_implementation_guide",
             },
             {
                 icon: simplification,
-                title: "Financial dashboards and forecasts",
-
+                title: "financial_dashboards_forecasts",
             }
-
         ],
     },
     {
         id: "human-resource-consulting",
         image: hrCons,
-        title: "Human Resource Consulting",
-        button: " Request an HR Consultation",
-        question: "Why HR Consulting with SAEE?",
-        description: "At SAEE, we turn HR into a strategic driver.We build systems that attract talent, align with business goals, and strengthen organizational culture.",
-        longDescription: "HR should create value, not just manage processes. We help you design scalable, compliant, and data-driven HR systems that support business growth and workforce performance.",
+        title: "hr_consulting",
+        button: "request_hr_consultation",
+        question: "why_hr_consulting",
+        description: "hr_consulting_description",
+        longDescription: "hr_consulting_long_description",
         sectionImage: hrImg,
         servicePc: sr9,
-
-
+         servicePcAr: sr9Ar,
         deliveryElements: [
-
             {
                 icon: goal,
-                title: "HR Strategic Planning",
-                description: "Align HR with business goals through structured workforce planning and capability development."
+                title: "hr_strategic_planning",
+                description: "hr_strategic_planning_desc"
             },
             {
                 icon: chart,
-                title: "Rewards & Performance Management",
-                description: "Build fair pay structures, bonuses, and LTIs with performance systems that drive results."
+                title: "rewards_performance_management",
+                description: "rewards_performance_management_desc"
             },
-
             {
                 icon: book,
-                title: "Talent Management & Development",
-                description: "Create programs for attraction, onboarding, training, retention, and succession planning."
+                title: "talent_management_development",
+                description: "talent_management_development_desc"
             },
             {
                 icon: screenPurple,
-                title: "HR Analytics & Dashboard",
-                description: "Track key workforce metrics—turnover, engagement, training, productivity—using real-time dashboards"
+                title: "hr_analytics_dashboard",
+                description: "hr_analytics_dashboard_desc"
             },
             {
                 icon: folderPurple,
-                title: "HRIS Technology Integration",
-                description: "Implement digital systems for HR workflows, data accuracy, and improved employee experience."
+                title: "hris_technology_integration",
+                description: "hris_technology_integration_desc"
             },
             {
                 icon: docs,
-                title: "Policy Development & Compliance",
-                description: "Update policies and handbooks to align with Saudi labor law and global standards."
+                title: "policy_development_compliance",
+                description: "policy_development_compliance_desc"
             },
             {
                 icon: outsourcing,
-                title: "HR Outsourcing",
-                description: "Manage payroll, onboarding, leave, documentation, and compliance as a full-service external HR team."
+                title: "hr_outsourcing",
+                description: "hr_outsourcing_desc"
             },
-
-
-
-
-
-
         ],
         benefits: [
-            "Aligns HR with business growth",
-            "Improves employee experience and retention",
-            "Enhances legal compliance and fairness",
-            "Reduces cost through efficient systems and outsourcing",
-            "Builds a competitive workforce strategy",
-
-
+            "hr_consulting_benefit_1",
+            "hr_consulting_benefit_2",
+            "hr_consulting_benefit_3",
+            "hr_consulting_benefit_4",
+            "hr_consulting_benefit_5",
         ],
-
         recievElements: [
             {
                 icon: document,
-                title: "HR strategic plan",
-
+                title: "hr_strategic_plan",
             },
             {
                 icon: bookWhite,
-                title: "Policy manual and compliance updates",
-
+                title: "policy_manual_compliance",
             },
             {
                 icon: simplification,
-                title: "Rewards structure and performance system",
-
+                title: "rewards_structure_performance",
             },
             {
                 icon: ss,
-                title: "HRIS setup and training",
-
+                title: "hris_setup_training",
             },
             {
                 icon: codeWhite,
-                title: "Talent development framework",
-
-            }
-            , {
+                title: "talent_development_framework",
+            },
+            {
                 icon: screen,
-                title: "HR dashboard and analytics reports",
-
+                title: "hr_dashboard_analytics",
             }
         ],
     },
     {
         id: "New-Investor-Services",
         image: newInvestor,
-        title: "New Investor Services",
-        button: " Request Investor Setup Support",
-        question: "Why New Investor Services with SAEE?",
-        description: "At SAEE, we help new investors launch with clarity. We manage legal, operational, and relocation tasks so you can focus on building your business.",
-        longDescription: "Entering a new market is complex. We simplify it with end-to-end support—from licensing to logistics—ensuring fast, compliant setup in Saudi Arabia.",
+        title: "new_investor_services",
+        button: "request_investor_setup_support",
+        question: "why_new_investor_services",
+        description: "new_investor_services_description",
+        longDescription: "new_investor_services_long_description",
         sectionImage: newInvImg,
         servicePc: sr10,
-
-
+         servicePcAr: sr10Ar,
         deliveryElements: [
-
             {
                 icon: docs,
-                title: "Company Formation & Licensing",
-                description: "Manage entity setup, commercial registration, and regulatory approvals."
+                title: "company_formation_licensing",
+                description: "company_formation_licensing_desc"
             },
             {
                 icon: earth,
-                title: "Investor Visa & Residency Services",
-                description: "Handle visa processing and renewal for investors and dependents."
+                title: "investor_visa_residency",
+                description: "investor_visa_residency_desc"
             },
-
             {
                 icon: home,
-                title: "Accommodation & Relocation Services",
-                description: "Provide housing, relocation support, and onboarding assistance for teams."
+                title: "accommodation_relocation",
+                description: "accommodation_relocation_desc"
             },
             {
                 icon: screenPurple,
-                title: "Office Setup & Furnishing",
-                description: "Source and furnish offices based on operational needs and scale."
+                title: "office_setup_furnishing",
+                description: "office_setup_furnishing_desc"
             },
             {
                 icon: folderPurple,
-                title: "Business Services Center",
-                description: "Deliver HR, payroll, legal, and finance admin as back-office support."
+                title: "business_services_center",
+                description: "business_services_center_desc"
             },
             {
                 icon: vip,
-                title: "VIP Concierge & Meet and Greet",
-                description: "Offer fast-track airport reception, transport, and local onboarding."
+                title: "vip_concierge_greeting",
+                description: "vip_concierge_greeting_desc"
             },
-
-
-
-
-
-
-
         ],
         benefits: [
-            "Speeds up legal and operational setup",
-            "Ensures full compliance with local laws",
-            "Reduces entry friction and operational risk",
-            "Provides turnkey support across functions",
-            "Supports smooth transition for teams and leaders",
-
+            "new_investor_services_benefit_1",
+            "new_investor_services_benefit_2",
+            "new_investor_services_benefit_3",
+            "new_investor_services_benefit_4",
+            "new_investor_services_benefit_5",
         ],
-
         recievElements: [
             {
                 icon: document,
-                title: "Registered legal entity and licenses",
-
+                title: "registered_legal_entity",
             },
             {
                 icon: earthWhite,
-                title: "Visa and residency setup",
-
+                title: "visa_residency_setup",
             },
             {
                 icon: homeWhite,
-                title: "Relocation and accommodation support",
-
+                title: "relocation_accommodation_support",
             },
-
             {
                 icon: screen,
-                title: "Operational workspace setup",
-
-            }
-            , {
+                title: "operational_workspace_setup",
+            },
+            {
                 icon: folder,
-                title: "Ongoing admin and compliance services",
-
+                title: "ongoing_admin_compliance",
             }
         ],
     },
     {
         id: "Industrial-Services-Studies",
         image: last,
-        title: "Industrial Services & Studies",
-        button: " Request an Industrial Assessment",
-        question: "Why Industrial Services with SAEE?",
-        description: "At SAEE, we help you run smarter operations. We optimize processes, systems, and production to increase efficiency, safety, and long-term performance.",
-        longDescription: "Industrial success depends on more than equipment. We bring data, structure, and lean systems that improve reliability, cut waste, and drive measurable gains.",
+        title: "industrial_services",
+        button: "request_industrial_assessment",
+        question: "why_industrial_services",
+        description: "industrial_services_description",
+        longDescription: "industrial_services_long_description",
         sectionImage: industImg,
         servicePc: sr11,
-
-
+         servicePcAr: sr11Ar,
         deliveryElements: [
-
-
             {
                 icon: chart,
-                title: "Industrial Studies & Technical Analysis",
-                description: "Run diagnostics and feasibility studies to find inefficiencies in processes and equipment."
+                title: "industrial_studies_technical",
+                description: "industrial_studies_technical_desc"
             },
-
             {
                 icon: screenPurple,
-                title: "OEE Systems & Dashboards",
-                description: "Deploy tools that track availability, performance, and quality to reduce downtime and boost output."
+                title: "oee_systems_dashboards",
+                description: "oee_systems_dashboards_desc"
             },
-
             {
                 icon: docs,
-                title: "Process Data Sheet (PDS) Preparation",
-                description: "Standardize workflows to ensure safety, traceability, and consistency across production lines."
+                title: "process_data_sheet",
+                description: "process_data_sheet_desc"
             },
             {
                 icon: folderPurple,
-                title: "6S Lean Methodology Implementation",
-                description: "Apply lean tools to organize the shop floor, reduce waste, and build a continuous improvement culture."
+                title: "lean_methodology_implementation",
+                description: "lean_methodology_implementation_desc"
             },
-
-
-
-
-
-
         ],
         benefits: [
-            "Improves production reliability and performance",
-            "Reduces operational waste and downtime",
-            "Increases workplace safety and organization",
-            "Provides real-time visibility into process metrics",
-            "Supports data-driven decision-making in industrial settings",
-
-
-
+            "industrial_services_benefit_1",
+            "industrial_services_benefit_2",
+            "industrial_services_benefit_3",
+            "industrial_services_benefit_4",
+            "industrial_services_benefit_5",
         ],
-
         recievElements: [
             {
                 icon: document,
-                title: "Technical and feasibility reports",
-
+                title: "technical_feasibility_reports",
             },
-
-
             {
                 icon: screen,
-                title: "OEE dashboard and performance metrics",
-
+                title: "oee_dashboard_metrics",
             },
             {
                 icon: codeWhite,
-                title: "Documented PDS for key processes",
-
-            }
-            ,
+                title: "documented_pds_processes",
+            },
             {
                 icon: folder,
-                title: "6S implementation tools and training",
-
+                title: "lean_implementation_tools",
             }
         ],
     },

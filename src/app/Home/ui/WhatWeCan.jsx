@@ -30,12 +30,12 @@ export default function WhatWeCan() {
   return (
     <MarginedSection>
       <section className="lg:mt-10 mt-5 pb-10 text-start">
-        <h2 className="text-base sm:text-2xl lg:text-4xl font-bold leading-tight mb-2 ">What We Can Do</h2>
-        <p className="lg:text-[28px] sm:text-xl text-xl font-[500]   leading-[42px] mb-8 text-justify">
+        <h2 className="text-2xl lg:text-3xl font-bold leading-tight mb-2  ">What We Can Do</h2>
+        <p className="lg:text-[28px] sm:text-xl text-xl font-[500]   leading-[42px] mb-8 ">
           Driving measurable results through strategic insight, innovation, and customized solutions.
         </p>
 
-        <div className="grid grid-cols-2 xl:grid-cols-4 gap-4 justify-items-center mb-8 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 justify-items-center mb-8 ">
           {items.map((item, idx) => (
             <div
               key={idx}

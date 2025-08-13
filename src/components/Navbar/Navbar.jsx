@@ -26,6 +26,20 @@ export function MobileNavbar() {
     const pathname = usePathname();
     const { t, locale, changeLanguage } = useLanguage();
 
+    // منع السكرول في الصفحة عند فتح المينو
+    React.useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+
+        // تنظيف عند إغلاق المكون
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isMenuOpen]);
+
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
         setAboutOpen(false);
@@ -111,7 +125,7 @@ export function MobileNavbar() {
                     {/* Left side - transparent, click to close */}
                     <div className="flex-1" onClick={toggleMenu}></div>
                     {/* Right side - Menu panel */}
-                    <div className="w-1/2 pt-10 bg-white h-full flex flex-col overflow-y-auto">
+                    <div className="w-1/2 pt-10 bg-white h-screen flex flex-col">
                         {/* Menu Items */}
                         <div className="flex-1 py-8 px-6" key={pathname}>
                             <Link href="/" className={`block py-4 text-lg font-medium ${pathname === "/" ? "text-purple-600" : "text-black"}`} onClick={toggleMenu}>{t('home')}</Link>
@@ -125,12 +139,12 @@ export function MobileNavbar() {
                             >
                                 <div className="flex items-center justify-between">
                                     {t('about')}
-                                    <svg className={`w-4 h-4 text-purple-600 ${locale==="ar" && "rotate-180"} ` } fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className={`w-4 h-4 text-purple-600 transition-transform duration-300 ${aboutOpen ? (locale==="ar" ? '-rotate-270' : 'rotate-90') : (locale==="ar" ? 'rotate-180' : '')}` } fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                                     </svg>
                                 </div>
                                 {aboutOpen && (
-                                    <div className="pl-4 mt-2">
+                                    <div className="pl-4 mt-2 animate-in slide-in-from-top-2 duration-200">
                                         {aboutItems.map((item) => (
                                             <Link
                                                 key={item.title}
@@ -154,12 +168,12 @@ export function MobileNavbar() {
                             >
                                 <div className="flex items-center justify-between">
                                     {t('services')}
-                                    <svg className={ `${locale==="ar" && "rotate-180"} w-4 h-4 text-purple-600 ` } fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className={`w-4 h-4 text-purple-600 transition-transform duration-300 ${servicesOpen ? (locale==="ar" ? '-rotate-270' : 'rotate-90') : (locale==="ar" ? 'rotate-180' : '')}` } fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                                     </svg>
                                 </div>
                                 {servicesOpen && (
-                                    <div className="pl-4 mt-2">
+                                    <div className="pl-4 mt-2 animate-in slide-in-from-top-2 duration-200">
                                         {components.map((item) => (
                                             <Link
                                                 key={item.title}
