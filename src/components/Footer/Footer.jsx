@@ -3,10 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "@/Assets/images/light-logo.svg";
 import facebook from "@/Assets/icons/fb.svg";
-import telegram from "@/Assets/icons/telegram.svg";
-import whatsapp from "@/Assets/icons/whats.svg";
-import twitter from "@/Assets/icons/twitter.svg";
 import instagram from "@/Assets/icons/insta.svg";
+import X from "@/Assets/icons/X.svg";
+import SnapchatLogo from "@/Assets/icons/SnapchatLogo.svg";
+import Linkedin from "@/Assets/icons/Linkedin.svg";
+import tiktok from "@/Assets/icons/tiktok.svg";
 import { useLanguage } from "@/hooks/useLanguage";
 
 export default function Footer() {
@@ -28,17 +29,20 @@ export default function Footer() {
           <Link href="https://www.facebook.com/profile.php?id=61577985857593" target="_blank" aria-label="Facebook">
             <Image src={facebook} alt="Facebook" width={24} height={24} />
           </Link>
-          <Link href="https://www.facebook.com/profile.php?id=61577985857593" target="_blank" aria-label="WhatsApp">
-            <Image src={whatsapp} alt="WhatsApp" width={24} height={24} />
+          <Link href="https://t.snapchat.com/26TqT9xJ" target="_blank" aria-label="SnapchatLogo">
+            <Image src={SnapchatLogo} alt="SnapchatLogo" width={24} height={24} />
           </Link>
-          <Link href="#" aria-label="Telegram">
-            <Image src={telegram} alt="Telegram" width={24} height={24} />
+          <Link href="https://x.com/saeebs_sa" target="_blank" aria-label="X">
+            <Image src={X} alt="Telegram" width={24} height={24} />
           </Link>
-          <Link href="#" aria-label="Instagram">
+          <Link href="https://www.instagram.com/saeebs_sa/?hl=en" target="_blank" aria-label="Instagram">
             <Image src={instagram} alt="Instagram" width={24} height={24} />
           </Link>
-          <Link href="#" aria-label="Twitter">
-            <Image src={twitter} alt="Twitter" width={24} height={24} />
+          <Link href="https://www.linkedin.com/company/saeebs/about/?viewAsMember=true" target="_blank" aria-label="Linkedin">
+            <Image src={Linkedin} alt="Linkedin" width={24} height={24} />
+          </Link>
+          <Link href="https://www.tiktok.com/@saeebs_saeed" target="_blank" aria-label="tiktok">
+            <Image src={tiktok} alt="tiktok" width={24} height={24} />
           </Link>
         </div>
 

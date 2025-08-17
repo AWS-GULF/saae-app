@@ -1,3 +1,4 @@
+"use client"
 import MarginedSection from '@/components/ui/MarginedSection'
 import React from 'react'
 import Image from 'next/image'
@@ -6,40 +7,43 @@ import hrCons from "@/Assets/images/hrCons.jpg"
 import stratrgicPlanning from "@/Assets/images/stratrgicPlanning.jpg"
 import Gover from "@/Assets/images/Gover-c.png"
 import { RegularButtonSecondaryBg } from '@/components/Button/buttons'
-
-const items = [
-  {
-    img: stratrgicPlanning,
-    title: "Strategic Planning",
-  },
-  {
-    img: digitealTrans,
-    title: "Digital Transformation",
-  },
-  {
-    img: hrCons,
-    title: "HR Consulting",
-  },
-  {
-    img: Gover,
-    title: "Corporate Governance",
-  }
-]
+import { useLanguage } from '@/hooks/useLanguage'
 
 export default function WhatWeCan() {
+  const { t } = useLanguage();
+
+  const items = [
+    {
+      img: stratrgicPlanning,
+      title: t("strategic_planning"),
+    },
+    {
+      img: digitealTrans,
+      title: t("digital_transformation"),
+    },
+    {
+      img: hrCons,
+      title: t("hr_consulting"),
+    },
+    {
+      img: Gover,
+      title: t("corporate_governance"),
+    }
+  ]
+
   return (
     <MarginedSection>
       <section className="lg:mt-10 mt-5 pb-10 text-start">
-        <h2 className="text-2xl lg:text-3xl font-bold leading-tight mb-2  ">What We Can Do</h2>
+        <h2 className="text-2xl lg:text-3xl font-bold leading-tight mb-2  ">{t("what_we_can_do_title")}</h2>
         <p className="lg:text-[28px] sm:text-xl text-xl font-[500]   leading-[42px] mb-8 ">
-          Driving measurable results through strategic insight, innovation, and customized solutions.
+          {t("what_we_can_do_desc")}
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 justify-items-center mb-8 ">
           {items.map((item, idx) => (
             <div
               key={idx}
-              className="relative w-40 h-40 md:w-74 md:h-74 rounded-full overflow-hidden group cursor-pointer"
+              className="relative w-40 h-40 md:w-68 md:h-68 rounded-full overflow-hidden group cursor-pointer"
             >
               {/* Image */}
               <Image
