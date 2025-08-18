@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-=======
+
 ## Getting Start
 >>>>>>> e0ee7219ef67c6780c4ecb53a8aff23686f29240
 
