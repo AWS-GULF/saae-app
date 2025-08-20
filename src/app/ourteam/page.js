@@ -1,6 +1,7 @@
 "use client"
 import React from "react"
 import Image from "next/image"
+import { useLanguage } from "@/hooks/useLanguage"
 
 import outTeam from "@/Assets/images/outTeam.svg"
 import PagesHero from "@/components/ui/PagesHero"
@@ -41,6 +42,7 @@ const teamMembers = [
 ]
 
 export default function page() {
+  const { dir } = useLanguage()
   return (
     <div>
       <PagesHero bg={outTeam} alt={"outTeam"} title={"Our Team"} />
@@ -93,7 +95,10 @@ export default function page() {
                <div
                 className={`flex-1 p-6 bg-[#EAE3F3] rounded-2xl relative z-0  
                 text-center lg:text-left 
-                ${member.reverse ? "lg:-mr-32 lg:ml-0 pe-40" : "lg:-ml-32 ps-40"} `}
+                ${member.reverse
+                    ? (dir === 'rtl' ? "lg:-ml-32 lg:mr-0 pe-40" : "lg:-mr-32 lg:ml-0 pe-40")
+                    : (dir === 'rtl' ? "lg:-mr-32 ps-40" : "lg:-ml-32 ps-40")
+                  } `}
               >
                 <div className={`${member.reverse ? "lg:pe-32" : "lg:ps-32"}`}>
                   <h3 className="text-2xl lg:text-3xl font-bold leading-tight">
@@ -140,7 +145,10 @@ export default function page() {
                <div
                 className={`flex-1 p-6 bg-[#EAE3F3] rounded-2xl relative z-0  
                 text-center lg:text-left 
-                ${member.reverse ? "lg:-mr-32 lg:ml-0 " : "lg:-ml-32 "} `}
+                ${member.reverse
+                    ? (dir === 'rtl' ? "lg:-ml-32 lg:mr-0 " : "lg:-mr-32 lg:ml-0 ")
+                    : (dir === 'rtl' ? "lg:-mr-32 " : "lg:-ml-32 ")
+                  } `}
               >
                 <div className={`${member.reverse ? "lg:pe-32" : "lg:ps-32"}`}>
                   <h3 className="text-2xl lg:text-3xl font-bold leading-tight">

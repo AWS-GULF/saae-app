@@ -85,3 +85,15 @@ export const ServiceButton = ({ href = "#", children, img }) => {
 };
 
 
+export const Submit = ({ children }) => {
+  const { t, locale, changeLanguage } = useLanguage();
+
+  return (
+    <div
+   
+      className="cursor-pointer w-[185px] h-[45px] border-2 bg-secondary border-secondary rounded-2xl flex gap-4 justify-center items-center"
+    >
+      <span className="text-xl font-[500] text-gray-400">{children || t('button_back_to_home')}</span>
+    </div>
+  );
+};
