@@ -6,7 +6,7 @@ const nextConfig = {
     localeDetection: true,
   },
   experimental: {
-    appDir: true,
+    // appDir: true,
   },
   webpack: (config) => {
     config.module.rules.push({
