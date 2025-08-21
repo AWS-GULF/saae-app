@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import MarginedSection from '@/components/ui/MarginedSection'
 import { getJobByCode } from '@/app/careers/data/jobs'
@@ -6,7 +7,7 @@ import careersBG from '@/Assets/images/careersBG.svg'
 import Link from 'next/link'
 
 export default function JobDescriptionPage({ params }) {
-  const { code } = params
+  const { code } = React.use(params)
   const job = getJobByCode(code)
 
   return (
@@ -20,34 +21,29 @@ export default function JobDescriptionPage({ params }) {
           </div>
         ) : (
           <div className="py-8">
-            <div className="bg-white p-6 rounded-lg shadow">
+            <div className="bg-white p-6 rounded-lg shadow max-w-screen-lg mx-auto">
               <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
                 <div>
-                  <h2 className="text-2xl font-bold mb-2">{job.title}</h2>
-                  <div className="space-y-1 text-gray-700">
+                  <h2 className="   font-[400] mb-2"><span ><strong>Job Title:</strong> </span>{job.title}</h2>
+                  <div className="space-y-1 ">
                     <p><strong>Code:</strong> {job.code}</p>
                     <p><strong>Location:</strong> {job.location}</p>
                     <p><strong>Department:</strong> {job.department}</p>
                     <p><strong>Type:</strong> {job.type}</p>
                   </div>
                 </div>
-                <Link
-                  href={`/careers/application?job=${encodeURIComponent(job.code)}`}
-                  className="bg-purple-600 self-start text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500"
-                >
-                  Apply Now
-                </Link>
+
               </div>
 
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-lg font-bold text-purple-800 mb-3">Role Summary</h3>
-                  <p className="text-gray-700 leading-relaxed">{job.summary}</p>
+                  <h3 className="text-lg font-bold text-[#280659] mb-3">Role Summary</h3>
+                  <p className=" leading-relaxed font-[500]">{job.summary}</p>
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-bold text-purple-800 mb-3">Key Responsibilities</h3>
-                  <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <h3 className="text-lg font-bold text-[#280659] mb-3">Key Responsibilities</h3>
+                  <ul className="list-disc list-inside space-y-2 font-[500] ">
                     {job.responsibilities.map((resp, index) => (
                       <li key={index}>{resp}</li>
                     ))}
@@ -55,8 +51,8 @@ export default function JobDescriptionPage({ params }) {
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-bold text-purple-800 mb-3">Requirements</h3>
-                  <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <h3 className="text-lg font-bold text-[#280659] mb-3">Requirements</h3>
+                  <ul className="list-disc list-inside space-y-2 font-[500] ">
                     {job.requirements.map((req, index) => (
                       <li key={index}>{req}</li>
                     ))}
@@ -64,13 +60,24 @@ export default function JobDescriptionPage({ params }) {
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-bold text-purple-800 mb-3">What We Offer</h3>
-                  <ul className="list-disc list-inside space-y-2 text-gray-700">
+                  <h3 className="text-lg font-bold text-[#280659] mb-3">What We Offer</h3>
+                  <ul className="list-disc list-inside space-y-2 font-[500] ">
                     {job.offers.map((offer, index) => (
                       <li key={index}>{offer}</li>
                     ))}
                   </ul>
                 </div>
+
+
+                <div className="flex justify-center items-center">
+                  <Link
+                    href={`/careers/application?job=${encodeURIComponent(job.code)}`}
+                    className=" self-start text-white px-6 py-3 rounded-[8px]  font-semibold bg-secondary"
+                  >
+                    Apply Now
+                  </Link>
+                </div>
+
               </div>
             </div>
           </div>
