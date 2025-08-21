@@ -69,7 +69,7 @@ const caseStudies = [
   },
 ]
 
-export default function page() {
+export default function Page() {
   const { dir } = useLanguage()
   return (
     <>
