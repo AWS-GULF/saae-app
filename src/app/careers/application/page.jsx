@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Suspense } from 'react'
 import MarginedSection from '@/components/ui/MarginedSection'
 import { Upload } from 'lucide-react'
 import saudiArabiaIcon from "@/Assets/icons/saudiArabiaIcon.svg"
@@ -7,7 +7,8 @@ import saudiArabiaIcon from "@/Assets/icons/saudiArabiaIcon.svg"
 import { useSearchParams } from 'next/navigation'
 import Image from 'next/image'
 
-export default function ApplicationPage() {
+// مكون منفصل لاستخدام useSearchParams
+function ApplicationForm() {
   const searchParams = useSearchParams()
   const jobParam = searchParams.get('job') || ''
 
@@ -268,6 +269,15 @@ export default function ApplicationPage() {
         </div>
       </MarginedSection>
     </>
+  )
+}
+
+// مكون رئيسي مع Suspense boundary
+export default function ApplicationPage() {
+  return (
+    <Suspense fallback={<div className="text-center p-8">Loading...</div>}>
+      <ApplicationForm />
+    </Suspense>
   )
 }
 
