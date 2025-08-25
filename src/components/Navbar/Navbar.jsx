@@ -17,6 +17,7 @@ import {
 import Image from "next/image"
 import Menu from "@/Assets/icons/menu-ham.svg"
 import { useLanguage } from "@/hooks/useLanguage"
+import { services } from "@/app/services/data/services"
 import { usePathname } from "next/navigation"
 
 export function MobileNavbar() {
@@ -51,40 +52,18 @@ export function MobileNavbar() {
         changeLanguage(newLocale);
     };
 
-    // عناصر About
+    // عناصر About - تنقل داخل صفحة About بدون تغيير الترجمات
     const aboutItems = [
-        { title: t('components'), href: "#" },
-        { title: t('documentation'), href: "#" },
-        { title: t('blocks'), href: "#" },
+        { title: t('about_company_overview_title'), href: "/about#company-overview" },
+        { title: t('about_vision_mission_title'), href: "/about#vision-mission" },
+        { title: t('about_core_values_title'), href: "/about#core-values" },
+        { title: t('about_social_responsibility_title'), href: "/about#social-responsibility" },
+        { title: t('about_how_we_work_title'), href: "/about#how-we-work" },
+        { title: t('about_client_segments_title'), href: "/about#client-segments" },
     ];
 
-    // عناصر Services
-    const components = [
-        {
-            title: t('alertDialog'),
-            href: "/docs/primitives/alert-dialog",
-        },
-        {
-            title: t('hoverCard'),
-            href: "/docs/primitives/hover-card",
-        },
-        {
-            title: t('progress'),
-            href: "/docs/primitives/progress",
-        },
-        {
-            title: t('scrollArea'),
-            href: "/docs/primitives/scroll-area",
-        },
-        {
-            title: t('tabs'),
-            href: "/docs/primitives/tabs",
-        },
-        {
-            title: t('tooltip'),
-            href: "/docs/primitives/tooltip",
-        },
-    ];
+    // Services for mobile: from real services data
+    const mobileServices = services.map((s) => ({ title: t(s.title), href: `/services/${s.id}` }))
 
 
 
@@ -139,7 +118,7 @@ export function MobileNavbar() {
                             >
                                 <div className="flex items-center justify-between">
                                     {t('about')}
-                                    <svg className={`w-4 h-4 text-purple-600 transition-transform duration-300 ${aboutOpen ? (locale==="ar" ? '-rotate-270' : 'rotate-90') : (locale==="ar" ? 'rotate-180' : '')}` } fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className={`w-4 h-4 text-purple-900 transition-transform duration-300 ${aboutOpen ? (locale==="ar" ? '-rotate-270' : 'rotate-90') : (locale==="ar" ? 'rotate-180' : '')}` } fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                                     </svg>
                                 </div>
@@ -168,13 +147,13 @@ export function MobileNavbar() {
                             >
                                 <div className="flex items-center justify-between">
                                     {t('services')}
-                                    <svg className={`w-4 h-4 text-purple-600 transition-transform duration-300 ${servicesOpen ? (locale==="ar" ? '-rotate-270' : 'rotate-90') : (locale==="ar" ? 'rotate-180' : '')}` } fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className={`w-4 h-4 text-purple-900 transition-transform duration-300 ${servicesOpen ? (locale==="ar" ? '-rotate-270' : 'rotate-90') : (locale==="ar" ? 'rotate-180' : '')}` } fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                                     </svg>
                                 </div>
                                 {servicesOpen && (
                                     <div className="pl-4 mt-2 animate-in slide-in-from-top-2 duration-200">
-                                        {components.map((item) => (
+                                        {mobileServices.map((item) => (
                                             <Link
                                                 key={item.title}
                                                 href={item.href}
@@ -265,40 +244,18 @@ export function Navbar() {
         changeLanguage(newLocale);
     };
 
-    // عناصر About
+    // عناصر About - Desktop: روابط لأقسام صفحة About
     const aboutItems = [
-        { title: t('components'), href: "#" },
-        { title: t('documentation'), href: "#" },
-        { title: t('blocks'), href: "#" },
+        { title: t('about_company_overview_title'), href: "/about#company-overview" },
+        { title: t('about_vision_mission_title'), href: "/about#vision-mission" },
+        { title: t('about_core_values_title'), href: "/about#core-values" },
+        { title: t('about_social_responsibility_title'), href: "/about#social-responsibility" },
+        { title: t('about_how_we_work_title'), href: "/about#how-we-work" },
+        { title: t('about_client_segments_title'), href: "/about#client-segments" },
     ];
 
-    // عناصر Services
-    const servicesItems = [
-        {
-            title: t('alertDialog'),
-            href: "/docs/primitives/alert-dialog",
-        },
-        {
-            title: t('hoverCard'),
-            href: "/docs/primitives/hover-card",
-        },
-        {
-            title: t('progress'),
-            href: "/docs/primitives/progress",
-        },
-        {
-            title: t('scrollArea'),
-            href: "/docs/primitives/scroll-area",
-        },
-        {
-            title: t('tabs'),
-            href: "/docs/primitives/tabs",
-        },
-        {
-            title: t('tooltip'),
-            href: "/docs/primitives/tooltip",
-        },
-    ];
+    // Services (desktop): from real services data
+    const servicesItems = services.map((s) => ({ title: t(s.title), href: `/services/${s.id}` }))
 
 
 
@@ -334,16 +291,20 @@ export function Navbar() {
                                 </Link>
                             </NavigationMenuLink>
                             {aboutDropdownOpen && (
-                                <div className="absolute mt-2 bg-white shadow-lg rounded-md py-2 min-w-[180px] z-50">
-                                    {aboutItems.map((item) => (
-                                        <Link
-                                            key={item.title}
-                                            href={item.href}
-                                            className="block px-4 py-2 text-black hover:text-purple-600 hover:bg-gray-100 text-base whitespace-nowrap"
-                                        >
-                                            {item.title}
-                                        </Link>
-                                    ))}
+                                <div className="absolute mt-0 z-50">
+                                    <div className="bg-[#F3F3F3] rounded-2xl shadow-lg px-8 py-6 min-w-[360px]">
+                                        <div className="flex flex-col gap-4">
+                                            {aboutItems.map((item) => (
+                                                <Link
+                                                    key={item.title}
+                                                    href={item.href}
+                                                    className="text-black hover:text-purple-600 text-lg leading-7"
+                                                >
+                                                    {item.title}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </div>
                                 </div>
                             )}
                         </NavigationMenuItem>
@@ -362,16 +323,20 @@ export function Navbar() {
                                 </Link>
                             </NavigationMenuLink>
                             {servicesDropdownOpen && (
-                                <div className="absolute mt-2 bg-white shadow-lg rounded-md py-2 min-w-[220px] z-50">
-                                    {servicesItems.map((item) => (
-                                        <Link
-                                            key={item.title}
-                                            href={item.href}
-                                            className="block px-4 py-2 text-black hover:text-purple-600 hover:bg-gray-100 text-base whitespace-nowrap"
-                                        >
-                                            {item.title}
-                                        </Link>
-                                    ))}
+                                <div className="absolute mt-0 z-50">
+                                    <div className="bg-[#F3F3F3] rounded-2xl shadow-lg px-8 py-6 min-w-[640px]">
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-16">
+                                            {servicesItems.map((item) => (
+                                                <Link
+                                                    key={item.title}
+                                                    href={item.href}
+                                                    className="text-black hover:text-purple-600 text-sm leading-7"
+                                                >
+                                                    {item.title}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </div>
                                 </div>
                             )}
                         </NavigationMenuItem>

@@ -2,8 +2,45 @@
 "use client"
 
 import MarginedSection from '@/components/ui/MarginedSection'
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useLanguage } from '@/hooks/useLanguage'
+
+function AnimatedCounter({ end, duration = 1500, prefix = "" }) {
+    const [value, setValue] = useState(0)
+    const ref = useRef(null)
+    const startedRef = useRef(false)
+
+    useEffect(() => {
+        const el = ref.current
+        if (!el) return
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting && !startedRef.current) {
+                    startedRef.current = true
+                    const startTime = performance.now()
+                    const animate = (now) => {
+                        const elapsed = now - startTime
+                        const progress = Math.min(elapsed / duration, 1)
+                        const current = Math.floor(progress * end)
+                        setValue(current)
+                        if (progress < 1) requestAnimationFrame(animate)
+                    }
+                    requestAnimationFrame(animate)
+                }
+            })
+        }, { threshold: 0.3 })
+
+        observer.observe(el)
+        return () => observer.disconnect()
+    }, [end, duration])
+
+    return (
+        <div ref={ref} className="text-[56px] font-bold text-secondary mb-2">
+            {prefix}{value}
+        </div>
+    )
+}
 
 export default function SaeeNumbers() {
     const { t } = useLanguage();
@@ -26,9 +63,7 @@ export default function SaeeNumbers() {
                     <div className="lg:w-1/2 w-full flex flex-wrap lg:flex-nowrap gap-8 lg:gap-12 justify-center sm:justify-evenly lg:justify-end">
                         {/* Professional Certifications */}
                         <div className="text-center">
-                            <div className="text-[56px] font-bold text-secondary mb-2">
-                                {t('saee_certifications_number')}
-                            </div>
+                            <AnimatedCounter end={30} prefix="+" />
                             <div className="font-bold text-base lg:text-2xl">
                                 {t('saee_certifications_label')}
                             </div>
@@ -36,9 +71,7 @@ export default function SaeeNumbers() {
 
                         {/* Certified Consultants */}
                         <div className="text-center">
-                            <div className="text-[56px] font-bold text-secondary mb-2">
-                                {t('saee_consultants_number')}
-                            </div>
+                            <AnimatedCounter end={40} prefix="+" />
                             <div className="font-bold text-base lg:text-2xl">
                                 {t('saee_consultants_label')}
                             </div>
@@ -46,9 +79,7 @@ export default function SaeeNumbers() {
 
                         {/* Years of Experience */}
                         <div className="text-center">
-                            <div className="text-[56px] font-bold text-secondary mb-2">
-                                {t('saee_experience_number')}
-                            </div>
+                            <AnimatedCounter end={20} />
                             <div className="font-bold text-base lg:text-2xl">
                                 {t('saee_experience_label')}
                             </div>

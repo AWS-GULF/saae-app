@@ -35,7 +35,7 @@ export default function About() {
 
       <MarginedSection>
         {/* company overview Section */}
-        <div className='lg:mb-20 sm:mb-10 mb-5 '>
+        <div id="company-overview" className='lg:mb-20 sm:mb-10 mb-5 '>
           <h2 className="text-2xl lg:text-3xl font-bold leading-tight mb-2">
             {t('about_company_overview_title')}
           </h2>
@@ -53,7 +53,7 @@ export default function About() {
 
 
         {/* vision and mission */}
-        <div className="flex sm:flex-row flex-col justify-between items-center lg:mb-10 sm:mb-5 mb-5 ">
+        <div id="vision-mission" className="flex sm:flex-row flex-col justify-between items-center lg:mb-10 sm:mb-5 mb-5 ">
           <div className=' sm:w-2/3 w-full'>
             <h2 className="text-2xl lg:text-3xl font-bold leading-tight mb-4 sm:mt-0 ">
               {t('about_vision_mission_title')}
@@ -80,7 +80,7 @@ export default function About() {
         </div>
 
 
-        <div className="flex justify-center items-center lg:mb-10 sm:mb-5 mb-5">
+        <div id="core-values" className="flex justify-center items-center lg:mb-10 sm:mb-5 mb-5">
           <Image src={locale === 'ar' ? sagityArabic : sagityEnglish} alt="sagity section" className='w-full object-cover scale-120 sm:scale-100  my-10' />
 
         </div>
@@ -90,7 +90,7 @@ export default function About() {
 
         {/* social responsibility Section */}
 
-        <div className="social lg:mb-20 sm:mb-10 mb-5">
+        <div id="social-responsibility" className="social lg:mb-20 sm:mb-10 mb-5">
           <h2 className="text-2xl lg:text-3xl font-bold leading-tight mb-2">
             {t('about_social_responsibility_title')}
           </h2>
@@ -130,7 +130,7 @@ export default function About() {
           </div>
         </div>
         {/* How We Work */}
-        <div className="howWeWork lg:mb-20 sm:mb-10 mb-5">
+        <div id="how-we-work" className="howWeWork lg:mb-20 sm:mb-10 mb-5">
           <h2 className="text-2xl lg:text-3xl font-bold leading-tight mb-2">
             {t('about_how_we_work_title')}
           </h2>
@@ -156,7 +156,7 @@ export default function About() {
         </div>
 
         {/* client */}
-        <div className="client lg:mb-20 sm:mb-10 mb-5">
+        <div id="client-segments" className="client lg:mb-20 sm:mb-10 mb-5">
           <h2 className="text-2xl lg:text-3xl font-bold leading-tight mb-2">
             {t('about_client_segments_title')}
           </h2>

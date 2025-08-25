@@ -40,14 +40,14 @@ const CareersFlow = () => {
 
                 {/* Graduate Opportunities Section */}
                 <div className="bg-gray-50  overflow-hidden  border-2 border-[#BCB2CC] rounded-[8px] ">
-                    <div className="bg-[#EAE4EF] p-4">
+                    <div className="bg-[#EAE4EF] p-2">
 
                         <div className=" rounded-lg overflow-hidden">
                             <button
                                 onClick={() => toggleSection('freshGraduate')}
                                 className="w-full flex items-center justify-between bg-[#EAE4EF] transition-colors"
                             >
-                                <span className="font-[500] mb-2 text-[#30086B] text-xl">Fresh Graduate</span>
+                                <span className="font-[500]  text-[#30086B] text-xl">Fresh Graduate</span>
                                 {expandedSections.freshGraduate ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                             </button>
 

@@ -3,7 +3,7 @@ import React from "react"
 import Image from "next/image"
 import { useLanguage } from "@/hooks/useLanguage"
 
-import caseStudiesPage from "@/Assets/images/caseStudiesPage.svg"
+import caseStudiesPage from "@/Assets/images/saeeCase.svg"
 import PagesHero from "@/components/ui/PagesHero"
 import MarginedSection from "@/components/ui/MarginedSection"
 import arrowIcon from "@/Assets/icons/arrowCase.svg"
@@ -79,9 +79,8 @@ export default function Page() {
 
         <MarginedSection>
           <div >
-            <h2 className="text-2xl lg:text-3xl font-bold leading-tight mb-2">
-            </h2>
-            <p className="lg:text-[26px] sm:text-xl text-[21px] font-[500] leading-[42px] mb-8">
+         
+            <p className="lg:text-[26px] sm:text-xl text-[10px]  font-[500] lg:leading-[42px] mb-8 ">
               At SAEE, we define success by measurable outcomes. This page features a selection of case studies from our work across industries. Each example highlights how our tailored solutions addressed real challenges and delivered tangible business results.
             </p>
           </div>
@@ -181,7 +180,7 @@ export default function Page() {
           <div >
             <h2 className="text-2xl lg:text-3xl font-bold leading-tight mb-2">
             </h2>
-            <p className="lg:text-[26px] sm:text-xl text-[21px] font-[500] leading-[42px] mb-8">
+            <p className="lg:text-[26px] sm:text-xl text-base font-[500] leading-[42px] mb-8">
               At SAEE, we define success by measurable outcomes. This page features a selection of case studies from our work across industries. Each example highlights how our tailored solutions addressed real challenges and delivered tangible business results.
             </p>
           </div>

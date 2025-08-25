@@ -54,7 +54,7 @@ export default function WhatWeCan() {
               />
 
               {/* Gradient Overlay */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[linear-gradient(0deg,_rgba(118,72,149,0.4)_0%,_rgba(118,72,149,0.4)_100%)]"></div>
+              <div className="absolute inset-0 opacity-100 group-hover:opacity-100 transition-opacity duration-500 bg-[linear-gradient(0deg,_rgba(118,72,149,0.4)_0%,_rgba(118,72,149,0.4)_100%)]"></div>
 
               {/* Title */}
               <span className="absolute inset-0 flex items-center justify-center text-base lg:text-2xl text-white font-bold text-center px-2 transition-transform duration-500 group-hover:scale-110">

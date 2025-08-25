@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Hero1 from "@/Assets/images/Hero1.svg"
 import Hero2 from "@/Assets/images/Hero2.svg"
 import Hero3 from "@/Assets/images/Hero3.svg"
+import heroArrorw from "@/Assets/icons/heroArrorw.svg"
 import Image from 'next/image';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../../../components/ui/carousel";
 import { useLanguage } from '@/hooks/useLanguage';
@@ -56,8 +57,8 @@ export default function Hero() {
                             <div className='absolute left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2  w-full px-4 sm:px-6 lg:px-8'>
                                 <div className="flex   w-full justify-center items-center flex-col h-[300px] md:h-[350px] lg:h-[400px] ">
                                     <div className="flex-1 flex flex-col justify-center items-center">
-                                        <h1 className='font-bold text-base sm:text-[28px] lg:text-[40px] text-white pb-4 sm:pb-6 text-center'>{t('hero_slide1_title')}</h1>
-                                        <p className='font-normal lg:text-3xl text-base sm:text-[20px] text-white text-center w-full max-w-[350px] sm:max-w-[600px] lg:max-w-full px-2 sm:px-0'>{t('hero_slide1_desc')}</p>
+                                        <h1 className='font-bold text-[20px] sm:text-[28px] lg:text-[40px] text-white pb-4 sm:pb-6 text-center'>{t('hero_slide1_title')}</h1>
+                                        <p className='font-normal lg:text-3xl text-[18px] sm:text-[20px] text-white text-center w-full max-w-[350px] mb-6 sm:mb-0  sm:max-w-[600px] lg:max-w-full px-2 sm:px-0'>{t('hero_slide1_desc')}</p>
                                     </div>
                                     <div className="flex gap-3 sm:gap-4 flex-col sm:flex-row justify-center items-center">
                                         <LargeButton />
@@ -121,10 +122,16 @@ export default function Hero() {
                     </CarouselItem>
                 </CarouselContent>
                 {showPrevious && (
-                    <CarouselPrevious className={`${dir === 'rtl' ? 'right-8' : 'left-8'} top-[55%] sm:top-[52%] lg:top-[58%] -translate-y-1/2 bg-white/20 hover:bg-white/40 text-gray-800 border-0 shadow-lg`} />
+                    <CarouselPrevious className={`${dir === 'rtl' ? 'right-3' : 'left-3'} top-[50%] sm:top-[52%] lg:top-[58%] -translate-y-1/2 bg-white/20 hover:bg-white/40 text-gray-800 border-0 shadow-lg size-[70px]`}
+                    >
+                        <Image src={heroArrorw} alt="previous" width={70} height={70} className={`${dir === 'rtl' ? '' : 'rotate-180'}`} />
+                    </CarouselPrevious>
                 )}
                 {showNext && (
-                    <CarouselNext className={`${dir === 'rtl' ? 'left-8' : 'right-8'} top-[55%] sm:top-[52%] lg:top-[58%] -translate-y-1/2 bg-white/20 hover:bg-white/40 text-gray-800 border-0 shadow-lg`} />
+                    <CarouselNext className={`${dir === 'rtl' ? 'lg:left-6 left-4' : 'lg:right-6 right-4'} top-[50%] sm:top-[52%] lg:top-[58%] -translate-y-1/2 bg-white/20 hover:bg-white/40 text-gray-800 border-0 shadow-lg size-[70px]`}
+                    >
+                        <Image src={heroArrorw} alt="next" width={70} height={70} className={`${dir === 'rtl' ? 'rotate-180' : ''}`} />
+                    </CarouselNext>
                 )}
             </Carousel>
         </div>

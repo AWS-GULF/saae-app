@@ -163,7 +163,7 @@ function CarouselPrevious({
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}>
-      {dir === "rtl" ? <ArrowRight /> : <ArrowLeft />}
+      {props.children ? props.children : (dir === "rtl" ? <ArrowRight /> : <ArrowLeft />)}
       <span className="sr-only">Previous slide</span>
     </Button>
   );
@@ -186,7 +186,7 @@ function CarouselNext({
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}>
-      {dir === "rtl" ? <ArrowLeft /> : <ArrowRight />}
+      {props.children ? props.children : (dir === "rtl" ? <ArrowLeft /> : <ArrowRight />)}
       <span className="sr-only">Next slide</span>
     </Button>
   );

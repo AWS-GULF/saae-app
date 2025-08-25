@@ -60,7 +60,7 @@ export default function Footer() {
         <div className="w-full border-t border-white/40 my-4"></div>
 
         {/* Copyright */}
-        <div className="text-center text-sm  pb-10">
+        <div className="text-center text-sm  lg:pb-10 pb-">
           {t('copyright')}
         </div>
       </div>
