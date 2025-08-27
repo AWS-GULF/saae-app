@@ -185,7 +185,7 @@ export function MobileNavbar() {
                                     width={20}
                                     height={20}
                                 />
-                                <span className="text-black text-lg flex jusstify-start items-start">{t('language')}</span>
+                                <span className="text-black text-lg flex justify-start items-start">{t('language')}</span>
                             </button>
                         </div>
                      
