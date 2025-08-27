@@ -14,7 +14,7 @@ export const RegularButtonWhiteBg = ({ href = "#", children }) => {
     <div className="flex justify-center items-center">
       <Link
         href={href}
-        className="cursor-pointer w-[235px] h-[64px] border-2 border-secondary rounded-2xl bg-white flex justify-center items-center"
+        className="cursor-pointer w-[210px] h-[64px] lg:w-[235px] lg:h-[64px] border-2 border-secondary rounded-2xl bg-white flex justify-center items-center"
       >
         <div className="flex items-center gap-2 ">
           <p className="text-xl font-medium text-secondary leading-none flex items-center justify-center sm:pt-0 pt-[5px]">
@@ -39,7 +39,7 @@ export const RegularButtonSecondaryBg = ({ href = "#", children }) => {
     <div className="flex justify-center items-center">
       <Link
         href={href}
-        className="cursor-pointer w-[235px] h-[64px] border-2 bg-secondary border-secondary rounded-2xl flex justify-center items-center"
+        className="cursor-pointer w-[210px] h-[64px] lg:w-[235px]  border-2 bg-secondary border-secondary rounded-2xl flex justify-center items-center"
       >
         <div className="flex items-center gap-3 lg:gap-4">
           <span className="text-xl font-medium text-white leading-none sm:pt-0 pt-[5px]">
@@ -86,7 +86,7 @@ export const LargeButton = ({ href = "#", children, img }) => {
   return (
     <Link
       href={href}
-      className="cursor-pointer w-[300px] h-[64px] border-2 bg-secondary border-secondary rounded-2xl flex justify-center items-center"
+      className="cursor-pointer w-[270px] lg:w-[300px] h-[64px] border-2 bg-secondary border-secondary rounded-2xl flex justify-center items-center"
     >
       <div className="flex items-center gap-3 lg:gap-4">
         <span className="text-xl font-bold text-white leading-none sm:pt-0 pt-[5px]">
