@@ -122,7 +122,7 @@ export default function Feedback() {
 
 
 
-        <div className=" lg:hidden grid mt-10 mb-4 py-5 px-4 sm:px-6 md:px-12  grid-cols-1 lg:grid-cols-2 gap-5 items-center justify-center">
+        <div className=" lg:hidden grid  mt-10 mb-4 py-5 px-4 sm:px-6 md:px-12  grid-cols-1 lg:grid-cols-2 gap-5 items-center justify-center">
           {/* الجزء الشمال */}
           <div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight mb-2">
@@ -135,7 +135,7 @@ export default function Feedback() {
 
           {/* الجزء اليمين */}
           <div
-            className="relative h-[180px] sm:h-[200px] md:h-[220px] flex justify-center ms-14 cursor-pointer"
+            className="relative h-[180px] sm:h-[200px] md:h-[220px] flex justify-center ms-20  cursor-pointer"
             onClick={nextSlide}
           >
             <AnimatePresence>
