@@ -9,7 +9,7 @@ import Image from "next/image";
 import { useLanguage } from '@/hooks/useLanguage';
 
 export default function Feedback() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
   const [index, setIndex] = useState(0);
 
   const feedbacks = [
@@ -135,7 +135,7 @@ export default function Feedback() {
 
           {/* الجزء اليمين */}
           <div
-            className="relative h-[180px] sm:h-[200px] md:h-[220px] flex justify-center ms-20  cursor-pointer"
+            className={`${locale === "ar" ? "me-20" : "ms-20"} relative h-[180px] sm:h-[200px] md:h-[220px] flex justify-center   cursor-pointer`}
             onClick={nextSlide}
           >
             <AnimatePresence>
