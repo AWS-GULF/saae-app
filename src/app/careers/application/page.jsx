@@ -54,6 +54,9 @@ function ApplicationForm() {
     infoAccurate: false
   })
 
+  // For mobile/UX: show placeholder as text, switch to date on focus
+  const [birthInputType, setBirthInputType] = useState('text')
+
   const markTouched = (field) => setTouched(prev => ({ ...prev, [field]: true }))
 
   useEffect(() => {
@@ -87,12 +90,19 @@ function ApplicationForm() {
         break
       case 'birthDay':
         if (!v) msg = 'Birth Day is required'
+        else {
+          const dob = new Date(v)
+          const now = new Date()
+          const age = now.getFullYear() - dob.getFullYear() - ((now.getMonth() < dob.getMonth() || (now.getMonth() === dob.getMonth() && now.getDate() < dob.getDate())) ? 1 : 0)
+          if (Number.isNaN(dob.getTime()) || dob > now || age < 15) msg = 'Enter a valid birth date (15+ years)'
+        }
         break
       case 'gender':
         if (!v) msg = 'Gender is required'
         break
       case 'homePhone':
         if (!v) msg = 'Home Telephone is required'
+        else if (!/^\d{7,15}$/.test(String(v).replace(/\D/g, ''))) msg = 'Enter 7-15 digits'
         break
       case 'mobilePhone': {
         if (!v) msg = 'Mobile Telephone is required'
@@ -105,10 +115,15 @@ function ApplicationForm() {
         break
       case 'linkedinProfile':
         if (!v) msg = 'LinkedIn Profile is required'
-        else if (!/^https?:\/\//.test(String(v))) msg = 'Link must start with http or https'
+        else if (!/^https?:\/\/(www\.)?linkedin\.com\/.*$/i.test(String(v))) msg = 'Enter a valid LinkedIn URL'
         break
       case 'resume':
         if (!formData.resume) msg = 'Resume is required'
+        else {
+          const allowed = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document']
+          if (!allowed.includes(formData.resume.type || '')) msg = 'Allowed: PDF, DOC, DOCX'
+          else if ((formData.resume.size || 0) > 5 * 1024 * 1024) msg = 'Max size 5MB'
+        }
         break
       case 'privacyAgreed':
         if (!v) msg = 'You must agree to the privacy notice'
@@ -125,7 +140,23 @@ function ApplicationForm() {
 
   const isEmailValid = /[^\s@]+@[^\s@]+\.[^\s@]+/.test(formData.email)
   const isMobileValid = /^\d{7,15}$/.test(String(formData.mobilePhone).replace(/\D/g, ''))
-  const isLinkedInValid = formData.linkedinProfile ? /^https?:\/\//.test(formData.linkedinProfile) : false
+  const isHomePhoneValid = formData.homePhone ? /^\d{7,15}$/.test(String(formData.homePhone).replace(/\D/g, '')) : false
+  const isLinkedInValid = formData.linkedinProfile ? /^https?:\/\/(www\.)?linkedin\.com\/.*$/i.test(formData.linkedinProfile) : false
+  const isBirthValid = (() => {
+    if (!formData.birthDay) return false
+    const dob = new Date(formData.birthDay)
+    const now = new Date()
+    if (Number.isNaN(dob.getTime()) || dob > now) return false
+    const age = now.getFullYear() - dob.getFullYear() - ((now.getMonth() < dob.getMonth() || (now.getMonth() === dob.getMonth() && now.getDate() < dob.getDate())) ? 1 : 0)
+    return age >= 15
+  })()
+  const isResumeValid = (() => {
+    if (!formData.resume) return false
+    const allowed = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document']
+    const isTypeOk = allowed.includes(formData.resume.type || '')
+    const isSizeOk = (formData.resume.size || 0) <= 5 * 1024 * 1024
+    return isTypeOk && isSizeOk
+  })()
   const requiredFilled = [
     formData.firstName,
     formData.secondName,
@@ -136,9 +167,8 @@ function ApplicationForm() {
     formData.address,
     formData.city,
     formData.jobCode,
-    formData.coverLetter,
   ].every(Boolean) && !!formData.resume
-  const canSubmit = requiredFilled && isEmailValid && isMobileValid && isLinkedInValid && formData.privacyAgreed && formData.infoAccurate
+  const canSubmit = requiredFilled && isBirthValid && isEmailValid && isMobileValid && isHomePhoneValid && isLinkedInValid && isResumeValid && formData.privacyAgreed && formData.infoAccurate
 
   const fieldError = (field) => {
     switch (field) {
@@ -287,11 +317,12 @@ function ApplicationForm() {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                     <div>
                       <input
-                        type="date"
+                        type={birthInputType}
                         placeholder={t("application_birthday_placeholder")}
                         value={formData.birthDay}
                         onChange={(e) => handleInputChange('birthDay', e.target.value)}
-                        onBlur={() => markTouched('birthDay')}
+                        onFocus={() => setBirthInputType('date')}
+                        onBlur={() => { markTouched('birthDay'); if (!formData.birthDay) setBirthInputType('text') }}
                         className="w-full p-3 border border-gray-300 rounded bg-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-500"
                       />
                       {(touched.birthDay || triedSubmit) && fieldError('birthDay') && (
@@ -451,7 +482,7 @@ function ApplicationForm() {
                   </div>
                 </div>
 
-                <div>
+                {/* <div>
                   <h4 className="text-lg font-semibold mb-4">{t("application_cover_letter")}</h4>
                   <div>
                     <textarea
@@ -466,7 +497,7 @@ function ApplicationForm() {
                       <p className="text-xs text-red-600 mt-1 ml-1">{fieldError('coverLetter')}</p>
                     )}
                   </div>
-                </div>
+                </div> */}
 
                 <div className="space-y-4">
                   <p className="text-md font-[500]">
@@ -518,7 +549,7 @@ function ApplicationForm() {
                     onClick={handleSubmit}
                     disabled={!canSubmit}
                     aria-disabled={!canSubmit}
-                    className="bg-[#764895] text-white px-8 py-3 rounded-[8px] font-semibold hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                    className="bg-[#764895] text-white px-8 py-3 rounded-[8px] font-semibold hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#764895]"
                   >
                     {t("application_submit_button")}
                   </button>

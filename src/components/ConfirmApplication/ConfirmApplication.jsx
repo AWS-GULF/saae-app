@@ -27,7 +27,7 @@ export default function ConfirmApplication({
   const displayButtonText = buttonText || defaultButtonText;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+    <div className="fixed inset-0 bg-black/80 bg-opacity-50 flex items-center justify-center z-50 p-4">
       <div className="relative">
         {/* Checkmark Icon - positioned to overlap the top of the dialog */}
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
@@ -51,7 +51,7 @@ export default function ConfirmApplication({
           {/* Ok Button */}
           <button
             onClick={onClose}
-            className="bg-[#6A329F] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#5A2A8F] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#6A329F] focus:ring-offset-2"
+            className="bg-[#6A329F] text-white px-8 py-3 rounded-[6px] font-semibold hover:bg-[#5A2A8F] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#6A329F] focus:ring-offset-2"
           >
             {displayButtonText}
           </button>

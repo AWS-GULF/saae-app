@@ -52,7 +52,7 @@ export default function ServicePage({ params }) {
                                     {t(service.question)}
                                 </h2>
 
-                                <p className="lg:text-[26px] sm:text-xl text-[21px]  font-[500]   leading-[42px] mb-8">
+                                <p className="lg:text-[26px] sm:text-xl text-[21px]  font-[500]   leading-[42px] lg:mb-8">
                                     {t(service.longDescription)}
                                 </p>
                                 <div className='flex justify-center sm:justify-start'>
@@ -85,8 +85,8 @@ export default function ServicePage({ params }) {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
                         {service.deliveryElements.map((item, index) => {
                             return (
-                                <div key={index} className="flex flex-col justify-start items-center border-4 border-[#764895] rounded-[80px] text-center h-[290px] px-5  ">
-                                    <div className="my-4 ">
+                                <div key={index} className="flex flex-col justify-start items-center border-4 border-[#764895] rounded-[80px] text-center sm:h-[300px] h-fit min-h-[200px] px-5 pb-6 sm:pb-0  ">
+                                    <div className="mt-6 mb-4 ">
                                         <Image src={item.icon} alt={t(item.title)} width={50} height={50} />
                                     </div>
                                     <h3 className="text-[21px] sm:text-xl lg:text-[26px] font-bold leading-[150%] mb-2 text-primary">{t(item.title)}</h3>
@@ -103,15 +103,15 @@ export default function ServicePage({ params }) {
                     </h2>
 
                     {service.benefits.map((item, index) => {
-                        return <div className={`flex  gap-2 justify-start items-center mb-1 `} key={index}>
+                        return <div className={`flex  gap-2 sm:justify-start sm:items-center items-start mb-1 `} key={index}>
                             <Image
                                 src={arrowPurple}
                                 alt="arrow right"
                                 width={25}
                                 height={25}
-                                 className={`${locale === 'ar' ? 'rotate-180' : ''}`} 
+                                 className={`${locale === 'ar' ? 'rotate-180' : ''} mt-[6px] lg:mt-0` } 
                             />
-                            <p className=" leading-[150%] font-[500] lg:text-[26px] sm:text-xl text-[21px]" key={index}>{t(item)}</p>
+                            <p className=" leading-[150%] font-[500] lg:text-[26px] sm:text-xl text-[12px]" key={index}>{t(item)}</p>
                         </div>       
                     })
 
@@ -147,12 +147,12 @@ export default function ServicePage({ params }) {
                     </h2>
                     <div className="flex gap-4 justify-center items-center lg:justify-center lg:flex-row flex-col flex-wrap  ">
                         {service.recievElements.map((item, index) => {
-                            return <div className="bg-gradient-to-t from-[#280659] to-[#764895] rounded-full flex flex-col gap-4 items-center text-center justify-center mb-8  w-[250px] h-[250px]" key={index}>
+                            return <div className="bg-gradient-to-t from-[#280659] to-[#764895] rounded-full flex flex-col gap-4 items-center text-center justify-center mb-8 w-[200px] h-[200px]  sm:w-[250px] sm:h-[250px]" key={index}>
                                 <Image
                                     src={item.icon}
                                     alt={t(item.title)}
                                 />
-                                <p className='px-20 text-white text-xl '>{t(item.title)}</p>
+                                <p className='px-6 sm:px-20 text-white sm:text-xl text-[14px] '>{t(item.title)}</p>
                             </div>
                         })}
                     </div>
