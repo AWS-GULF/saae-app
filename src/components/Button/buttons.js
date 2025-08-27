@@ -42,7 +42,7 @@ export const RegularButtonSecondaryBg = ({ href = "#", children }) => {
         className="cursor-pointer w-[235px] h-[64px] border-2 bg-secondary border-secondary rounded-2xl flex justify-center items-center"
       >
         <div className="flex items-center gap-3 lg:gap-4">
-          <span className="text-xl font-medium text-white leading-none">
+          <span className="text-xl font-medium text-white leading-none pt-[5px]">
             {children || t('button_explore_more')}
           </span>
           <Image
@@ -89,7 +89,7 @@ export const LargeButton = ({ href = "#", children, img }) => {
       className="cursor-pointer w-[300px] h-[64px] border-2 bg-secondary border-secondary rounded-2xl flex justify-center items-center"
     >
       <div className="flex items-center gap-3 lg:gap-4">
-        <span className="text-xl font-bold text-white leading-none">
+        <span className="text-xl font-bold text-white leading-none pt-[6px]">
           {children || t('button_request_consultation')}
         </span>
         {img && (
@@ -114,7 +114,7 @@ export const ServiceButton = ({ href = "#", children, img }) => {
       className="cursor-pointer lg:w-[400px] w-[320px] h-[64px] border-2 bg-secondary border-secondary rounded-2xl flex justify-center items-center"
     >
       <div className="flex items-center gap-3 lg:gap-4">
-        <span className="text-xl font-bold text-white leading-none">
+        <span className="text-xl font-bold text-white leading-none pt-[6px]">
           {children || t('button_request_consultation')}
         </span>
         {img && (
