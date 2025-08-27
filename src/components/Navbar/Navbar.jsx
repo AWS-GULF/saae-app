@@ -100,7 +100,7 @@ export function MobileNavbar() {
 
             {/* Mobile Menu - Side Panel */}
             {isMenuOpen && (
-                <div className="fixed inset-0 z-40 flex ">
+                <div className="fixed inset-0 z-40 flex overflow-y-auto">
                     {/* Left side - transparent, click to close */}
                     <div className="flex-1" onClick={toggleMenu}></div>
                     {/* Right side - Menu panel */}
