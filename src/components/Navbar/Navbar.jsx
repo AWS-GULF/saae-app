@@ -116,14 +116,14 @@ export function MobileNavbar() {
                                 onMouseLeave={() => setAboutOpen(false)}
                                 onClick={() => setAboutOpen((v) => !v)}
                             >
-                                <div className="flex items-center justify-between">
+                                <div className="flex items-center justify-between ">
                                     {t('about')}
                                     <svg className={`w-4 h-4 text-purple-900 transition-transform duration-300 ${aboutOpen ? (locale==="ar" ? '-rotate-270' : 'rotate-90') : (locale==="ar" ? 'rotate-180' : '')}` } fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                                     </svg>
                                 </div>
                                 {aboutOpen && (
-                                    <div className="pl-4 mt-2 animate-in slide-in-from-top-2 duration-200">
+                                    <div className="pl-4 mt-2 animate-in slide-in-from-top-2 duration-200 overflow-y-auto">
                                         {aboutItems.map((item) => (
                                             <Link
                                                 key={item.title}
@@ -152,7 +152,7 @@ export function MobileNavbar() {
                                     </svg>
                                 </div>
                                 {servicesOpen && (
-                                    <div className="pl-4 mt-2 animate-in slide-in-from-top-2 duration-200">
+                                    <div className="pl-4 mt-2 animate-in slide-in-from-top-2 duration-200 overflow-y-auto">
                                         {mobileServices.map((item) => (
                                             <Link
                                                 key={item.title}
@@ -185,7 +185,7 @@ export function MobileNavbar() {
                                     width={20}
                                     height={20}
                                 />
-                                <span className="text-black text-lg">{t('language')}</span>
+                                <span className="text-black text-lg flex jusstify-start items-start">{t('language')}</span>
                             </button>
                         </div>
                      
