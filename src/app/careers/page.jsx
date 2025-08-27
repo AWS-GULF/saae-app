@@ -10,9 +10,9 @@ export default function careers() {
       <PagesHero bg={careersBG} alt={"careersBG"} title="Careers" />
       <MarginedSection>
         <div>
-          <h2 className="text-2xl lg:text-3xl font-bold leading-tight mb-2">
+          <h2 className="text-[26px] lg:text-3xl font-bold leading-tight mb-2">
             Why Work with SAEE          </h2>
-          <p className="lg:text-[26px] sm:text-xl text-base font-[500] leading-[42px] mb-8">
+          <p className="lg:text-[26px] sm:text-xl text-[20px] font-[500] leading-[42px] mb-8">
             At SAEE, we believe in building purposeful careers. We empower ambitious talents,
             invest in continuous development, and provide a collaborative, high-performance environment.
             Whether you are a fresh graduate or a seasoned expert, SAEE offers structured growth paths, professional support,

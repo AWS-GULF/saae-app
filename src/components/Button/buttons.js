@@ -17,7 +17,7 @@ export const RegularButtonWhiteBg = ({ href = "#", children }) => {
         className="cursor-pointer p-5 border-2 border-secondary rounded-2xl bg-white flex justify-center items-center"
       >
         <div className="flex items-center gap-3 lg:gap-4">
-          <p className="text-xl font-medium text-secondary leading-none flex items-center justify-center bg--200">
+          <p className="lg:text-xl font-medium text-secondary leading-none flex items-center justify-center bg--200">
             {children || t('button_explore_more')}
           </p>
           <Image

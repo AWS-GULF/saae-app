@@ -75,7 +75,7 @@ export default function Page() {
               ${member.reverse ? "lg:flex-row-reverse" : ""}`}
             >
               {/* الصورة */}
-              <div className="flex-shrink-0 relative z-10 flex justify-center lg:block">
+              <div className="flex-shrink-0 relative z-10 flex justify-center mb-10 sm:mb-8 lg:mb-0 lg:block">
                 <div className="w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] lg:w-[330px] lg:h-[330px] rounded-full bg-[#EAE3F3] flex items-center justify-center my-4">
                   <div className="w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] lg:w-[330px] lg:h-[330px] rounded-full overflow-hidden bg-[#8D79A6] relative border-[6px] border-[#EAE3F3]">
                     <Image
