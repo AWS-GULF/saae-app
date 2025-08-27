@@ -170,13 +170,11 @@ export function MobileNavbar() {
                             <Link href="/casestudies" className={`block py-4 text-lg font-medium ${pathname === "/casestudies" ? "text-purple-600" : "text-black"}`} onClick={toggleMenu}>{t('caseStudies')}</Link>
                             <Link href="/ourteam" className={`block py-4 text-lg font-medium ${pathname === "/ourteam" ? "text-purple-600" : "text-black"}`} onClick={toggleMenu}>{t('ourTeam')}</Link>
                             <Link href="/careers" className={`block py-4 text-lg font-medium ${pathname === "/careers" ? "text-purple-600" : "text-black"}`} onClick={toggleMenu}>{t('career')}</Link>
-                       
                             <Link href="/contactus" className={`block py-4 text-lg font-medium ${pathname === "/contactus" ? "text-purple-600" : "text-black"}`} onClick={toggleMenu}>{t('contactUs')}</Link>
-                       
-                       
-                       
+                        </div>
+
                         {/* Language Selector at Bottom */}
-                        <div className="  pb-6 pt-32">
+                        <div className=" h-48 pb-6 px-4 flex items-end ">
                             <button
                                 className="flex items-center gap-3 w-full justify-start"
                                 onClick={toggleLanguage}
@@ -190,8 +188,6 @@ export function MobileNavbar() {
                                 <span className="text-black text-lg">{t('language')}</span>
                             </button>
                         </div>
-                        </div>
-
                     </div>
                 </div>
             )}
