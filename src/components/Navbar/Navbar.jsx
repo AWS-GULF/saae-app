@@ -68,14 +68,14 @@ export function MobileNavbar() {
 
 
     return (
-        <div className="bg-white shadow-sm px-4 py-3 relative">
+        <div className="bg-white shadow-sm px-4 py-3 fixed top-0 left-0 right-0 z-50 ">
             {/* Blur overlay for the whole page when menu is open */}
             {isMenuOpen && (
-                <div className="fixed inset-0 z-30 backdrop-blur-md bg-white/30 pointer-events-none"></div>
+                <div className="fixed inset-0 z-30 backdrop-blur-md bg-white/30 pointer-events-none "></div>
             )}
 
             {/* Header (logo + menu) with blur when menu is open */}
-            <div className={`flex items-center justify-between transition-all duration-200 ${isMenuOpen ? 'backdrop-blur-md bg-white/60' : ''} relative z-50`}>
+            <div className={`flex items-center justify-between transition-all duration-200 ${isMenuOpen ? 'backdrop-blur-md bg-white/60' : ''} relative z-50 `}>
                 <span className={isMenuOpen ? 'blur-sm' : ''}>
                     <Image
                         src={logo}
@@ -100,13 +100,13 @@ export function MobileNavbar() {
 
             {/* Mobile Menu - Side Panel */}
             {isMenuOpen && (
-                <div className="fixed inset-0 z-40 flex">
+                <div className="fixed inset-0 z-40 flex ">
                     {/* Left side - transparent, click to close */}
                     <div className="flex-1" onClick={toggleMenu}></div>
                     {/* Right side - Menu panel */}
-                    <div className="w-1/2 pt-10 bg-white h-screen flex flex-col">
+                    <div className="w-1/2 pt-10 bg-white h-screen flex flex-col overflow-y-scroll">
                         {/* Menu Items */}
-                        <div className="flex-1 py-8 px-6" key={pathname}>
+                        <div className="flex-1 pt-8  px-6" key={pathname}>
                             <Link href="/" className={`block py-4 text-lg font-medium ${pathname === "/" ? "text-purple-600" : "text-black"}`} onClick={toggleMenu}>{t('home')}</Link>
 
                             {/* About Dropdown */}
@@ -128,7 +128,7 @@ export function MobileNavbar() {
                                             <Link
                                                 key={item.title}
                                                 href={item.href}
-                                                className="block py-2 text-base text-gray-700 hover:text-purple-600"
+                                                className="block py-2 text-[12px] text-gray-700 hover:text-purple-600"
                                                 onClick={toggleMenu}
                                             >
                                                 {item.title}
@@ -157,7 +157,7 @@ export function MobileNavbar() {
                                             <Link
                                                 key={item.title}
                                                 href={item.href}
-                                                className="block py-2 text-base text-gray-700 hover:text-purple-600"
+                                                className="block py-2 text-[12px] text-gray-700 hover:text-purple-600"
                                                 onClick={toggleMenu}
                                             >
                                                 {item.title}
@@ -170,11 +170,13 @@ export function MobileNavbar() {
                             <Link href="/casestudies" className={`block py-4 text-lg font-medium ${pathname === "/casestudies" ? "text-purple-600" : "text-black"}`} onClick={toggleMenu}>{t('caseStudies')}</Link>
                             <Link href="/ourteam" className={`block py-4 text-lg font-medium ${pathname === "/ourteam" ? "text-purple-600" : "text-black"}`} onClick={toggleMenu}>{t('ourTeam')}</Link>
                             <Link href="/careers" className={`block py-4 text-lg font-medium ${pathname === "/careers" ? "text-purple-600" : "text-black"}`} onClick={toggleMenu}>{t('career')}</Link>
+                       
                             <Link href="/contactus" className={`block py-4 text-lg font-medium ${pathname === "/contactus" ? "text-purple-600" : "text-black"}`} onClick={toggleMenu}>{t('contactUs')}</Link>
-                        </div>
-
+                       
+                       
+                       
                         {/* Language Selector at Bottom */}
-                        <div className=" py-6 px-4">
+                        <div className="  pb-6 pt-32">
                             <button
                                 className="flex items-center gap-3 w-full justify-start"
                                 onClick={toggleLanguage}
@@ -188,6 +190,8 @@ export function MobileNavbar() {
                                 <span className="text-black text-lg">{t('language')}</span>
                             </button>
                         </div>
+                        </div>
+
                     </div>
                 </div>
             )}

@@ -55,33 +55,33 @@ export default function About() {
         {/* vision and mission */}
         <div id="vision-mission" className="flex sm:flex-row flex-col justify-between items-center lg:mb-10 sm:mb-5 mb-5 ">
           <div className=' sm:w-2/3 w-full'>
-            <h2 className="text-2xl lg:text-3xl font-bold leading-tight mb-4 sm:mt-0 ">
+            <h2 className="text-[26px] lg:text-3xl font-bold leading-tight sm:mb-4 sm:mt-0 mt-4 mb-8 ">
               {t('about_vision_mission_title')}
             </h2>
             <h3 className="text-2xl lg:text-3xl font-bold leading-tight mb-2 text-primary">
               {t('about_vision_title')}
             </h3>
-            <p className="lg:text-[28px] sm:text-xl text-[21px]  font-[500]   leading-[42px] mb-8">
+            <p className="lg:text-[28px] sm:text-xl text-[14px]  font-[500]   leading-[42px] mb-8">
               {t('about_vision_desc')}
             </p>
             <h3 className="text-2xl lg:text-3xl font-bold leading-tight mb-2 text-primary">
               {t('about_mission_title')}
             </h3>
-            <p className="lg:text-[28px] sm:text-xl text-[21px]  font-[500]   leading-[42px] mb-8">
+            <p className="lg:text-[28px] sm:text-xl text-[14px]  font-[500]   leading-[42px] mb-8">
               {t('about_mission_desc')}
             </p>
 
           </div>
 
-          <div className='w-full sm:w-1/3 flex justify-end items-center'>
+          <div className='w-full sm:w-1/3 flex sm:justify-end justify-center items-center '>
             <Image src={vmimg} alt="vision and mission" />
           </div>
 
         </div>
 
 
-        <div id="core-values" className="flex justify-center items-center lg:mb-10 sm:mb-5 mb-5">
-          <Image src={locale === 'ar' ? sagityArabic : sagityEnglish} alt="sagity section" className='w-full object-cover scale-120 sm:scale-100  my-10' />
+        <div id="core-values" className="flex justify-center items-center lg:mb-10 sm:mb-5 mb-5 ">
+          <Image src={locale === 'ar' ? sagityArabic : sagityEnglish} alt="sagity section" className='w-full object-cover scale-105 sm:scale-100  my-10' />
 
         </div>
 
@@ -156,7 +156,7 @@ export default function About() {
         </div>
 
         {/* client */}
-        <div id="client-segments" className="client lg:mb-20 sm:mb-10 mb-5">
+        <div id="client-segments" className="client lg:mb-20 sm:mb-10 mb-14">
           <h2 className="text-2xl lg:text-3xl font-bold leading-tight mb-2">
             {t('about_client_segments_title')}
           </h2>
