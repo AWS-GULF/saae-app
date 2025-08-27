@@ -176,7 +176,7 @@ export function MobileNavbar() {
                         {/* Language Selector at Bottom */}
                         <div className=" h-48   flex items-end ">
                             <button
-                                className="flex items-start gap-3 w-full justify-start bg-red-200"
+                                className="flex items-start gap-3 w-full justify-start "
                                 onClick={toggleLanguage}
                             >
                                 <Image
