@@ -17,13 +17,13 @@ export const RegularButtonWhiteBg = ({ href = "#", children }) => {
         className="cursor-pointer w-[235px] h-[64px] border-2 border-secondary rounded-2xl bg-white flex justify-center items-center"
       >
         <div className="flex items-center gap-2 ">
-          <p className="text-xl font-medium text-secondary leading-none flex items-center justify-center sm:pt-0 pt-2">
+          <p className="text-xl font-medium text-secondary leading-none flex items-center justify-center sm:pt-0 pt-[6px]">
             {children || t('button_explore_more')}
           </p>
           <Image
             src={arrowRight}
             alt="arrow right"
-            className={`${locale === 'ar' ? 'rotate-180' : ''} w-5 h-5 object-contain`}
+            className={`${locale === 'ar' ? 'rotate-180' : ''} w-5 h-5 object-fit`}
           />
         </div>
       </Link>
