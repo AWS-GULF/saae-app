@@ -64,7 +64,7 @@ export default function SaeeNumbers() {
                         {/* Professional Certifications */}
                         <div className="text-center">
                             <AnimatedCounter end={30} prefix="+" />
-                            <div className="font-bold text-base lg:text-2xl">
+                            <div className="font-bold text-xl lg:text-2xl">
                                 {t('saee_certifications_label')}
                             </div>
                         </div>
@@ -72,7 +72,7 @@ export default function SaeeNumbers() {
                         {/* Certified Consultants */}
                         <div className="text-center">
                             <AnimatedCounter end={40} prefix="+" />
-                            <div className="font-bold text-base lg:text-2xl">
+                            <div className="font-bold text-xl lg:text-2xl">
                                 {t('saee_consultants_label')}
                             </div>
                         </div>
@@ -80,7 +80,7 @@ export default function SaeeNumbers() {
                         {/* Years of Experience */}
                         <div className="text-center">
                             <AnimatedCounter end={20} />
-                            <div className="font-bold text-base lg:text-2xl">
+                            <div className="font-bold text-xl lg:text-2xl">
                                 {t('saee_experience_label')}
                             </div>
                         </div>

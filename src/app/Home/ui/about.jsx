@@ -25,7 +25,7 @@ export default function About() {
             </p>
             <div className='flex justify-center sm:justify-start'>
 
-          <RegularButtonSecondaryBg />
+          <RegularButtonSecondaryBg  href='/about'/>
             </div>
           </div>
 

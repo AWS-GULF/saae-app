@@ -119,14 +119,16 @@ export default function Services() {
             <div key={index} className="flex flex-col items-center">
               {/* صورة بدائرة + جريدينت */}
               <div className="relative w-78 h-78 z-10">
-                <div className="rounded-full overflow-hidden w-full h-full relative border-8 border-[#EEEEEE]">
-                  <Image
-                    src={service.img}
-                    alt={service.title}
-                    className="object-cover w-full h-full"
-                  />
-                  <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(118,72,149,0.4)_0%,rgba(118,72,149,0.4)_100%)]"></div>
-                </div>
+                <Link href={`/services/${service.id}`} className="block rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500">
+                  <div className="rounded-full overflow-hidden w-full h-full relative border-8 border-[#EEEEEE]">
+                    <Image
+                      src={service.img}
+                      alt={service.title}
+                      className="object-cover w-full h-full"
+                    />
+                    <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(118,72,149,0.4)_0%,rgba(118,72,149,0.4)_100%)]"></div>
+                  </div>
+                </Link>
               </div>
 
               {/* خلفية الكارد تبدأ من منتصف الصورة */}

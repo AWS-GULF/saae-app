@@ -22,11 +22,11 @@ export default function ContactOurTeam() {
           {t("contact_our_team_title")}
         </h3>
 
-        <p className='mb-6 max-w-2xl'>
+        <p className='lg:mb-16 mb-12 max-w-2xl'>
           {t("contact_our_team_desc")}
         </p>
 
-        <RegularButtonSecondaryBg  >
+        <RegularButtonSecondaryBg href='/contactus'  >
           <p>{t("contact_our_team_button")}</p>
         </RegularButtonSecondaryBg>
       </div>

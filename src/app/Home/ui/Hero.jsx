@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import Hero1 from "@/Assets/images/Hero1.svg"
 import Hero2 from "@/Assets/images/Hero2.svg"
 import Hero3 from "@/Assets/images/Hero3.svg"
-import heroArrorw from "@/Assets/icons/heroArrorw.svg"
+import heroArrorw from "@/Assets/icons/heroArrow.svg"
 import Image from 'next/image';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../../../components/ui/carousel";
 import { useLanguage } from '@/hooks/useLanguage';
@@ -61,8 +61,8 @@ export default function Hero() {
                                         <p className='font-normal lg:text-3xl text-[18px] sm:text-[20px] text-white text-center w-full max-w-[350px] mb-6 sm:mb-0  sm:max-w-[600px] lg:max-w-full px-2 sm:px-0'>{t('hero_slide1_desc')}</p>
                                     </div>
                                     <div className="flex gap-3 sm:gap-4 flex-col sm:flex-row justify-center items-center">
-                                        <LargeButton />
-                                        <RegularButtonWhiteBg />
+                                        <LargeButton href='/contactus' />
+                                        <RegularButtonWhiteBg href='/services' />
                                     </div>
                                 </div>
                             </div>
@@ -86,8 +86,8 @@ export default function Hero() {
                                         <p className='font-normal w-full max-w-[350px] sm:max-w-[500px] lg:max-w-[900px] xl:max-w-full lg:text-3xl text-base sm:text-[20px] text-white text-center leading-8 sm:leading-10 px-2 sm:px-0'>{t('hero_slide2_desc')}</p>
                                     </div>
                                     <div className="flex gap-3 sm:gap-4 flex-col sm:flex-row justify-center items-center">
-                                        <LargeButton />
-                                        <RegularButtonWhiteBg />
+                                        <LargeButton href='/contactus' />
+                                        <RegularButtonWhiteBg href='/services' />
                                     </div>
                                 </div>
                             </div>
@@ -113,8 +113,8 @@ export default function Hero() {
                                         <p className='font-normal w-full max-w-[350px] sm:max-w-[500px] lg:max-w-[900px] xl:max-w-full lg:text-3xl text-base sm:text-[20px] text-white text-center leading-8 sm:leading-10 px-2 sm:px-0'>{t('hero_slide3_desc')}</p>
                                     </div>
                                     <div className="flex gap-3 sm:gap-4 flex-col sm:flex-row justify-center items-center">
-                                        <LargeButton />
-                                        <RegularButtonWhiteBg />
+                                        <LargeButton href='/contactus' />
+                                        <RegularButtonWhiteBg href='/services'  />
                                     </div>
                                 </div>
                             </div>
@@ -122,15 +122,15 @@ export default function Hero() {
                     </CarouselItem>
                 </CarouselContent>
                 {showPrevious && (
-                    <CarouselPrevious className={`${dir === 'rtl' ? 'right-3' : 'left-3'} top-[50%] sm:top-[52%] lg:top-[58%] -translate-y-1/2 bg-white/20 hover:bg-white/40 text-gray-800 border-0 shadow-lg size-[70px]`}
+                    <CarouselPrevious className={`${dir === 'rtl' ? 'right-3' : 'left-3'} top-[50%] sm:top-[52%] lg:top-[58%] -translate-y-1/2  text-gray-800 border-0 shadow-lg size-[70px]`}
                     >
                         <Image src={heroArrorw} alt="previous" width={70} height={70} className={`${dir === 'rtl' ? '' : 'rotate-180'}`} />
                     </CarouselPrevious>
                 )}
                 {showNext && (
-                    <CarouselNext className={`${dir === 'rtl' ? 'lg:left-6 left-4' : 'lg:right-6 right-4'} top-[50%] sm:top-[52%] lg:top-[58%] -translate-y-1/2 bg-white/20 hover:bg-white/40 text-gray-800 border-0 shadow-lg size-[70px]`}
+                    <CarouselNext className={`${dir === 'rtl' ? 'lg:left-6 left-4' : 'lg:right-6 right-4'} top-[50%] sm:top-[52%] lg:top-[58%] -translate-y-1/2  text-gray-800 border-0 shadow-lg size-[70px]`}
                     >
-                        <Image src={heroArrorw} alt="next" width={70} height={70} className={`${dir === 'rtl' ? 'rotate-180' : ''}`} />
+                        <Image src={heroArrorw} alt="next" width={30} height={30} className={`${dir === 'rtl' ? 'rotate-180' : ''} lg:w-[30px] h-[30px]`} />
                     </CarouselNext>
                 )}
             </Carousel>
