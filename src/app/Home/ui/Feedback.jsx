@@ -53,7 +53,7 @@ export default function Feedback() {
 
           {/* الجزء اليمين */}
           <div
-            className="relative h-[180px] sm:h-[200px] md:h-[220px] flex justify-center cursor-pointer"
+            className="relative h-[180px] sm:h-[200px] md:h-[220px] flex  justify-center cursor-pointer"
             onClick={nextSlide}
           >
             <AnimatePresence>
@@ -74,7 +74,7 @@ export default function Feedback() {
                     }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="
+                    className={`  
                     absolute top-0 
                     left-1/2 -translate-x-1/2
                     w-full max-w-[320px] sm:max-w-[450px] md:max-w-[625px]
@@ -82,7 +82,8 @@ export default function Feedback() {
                     rounded-2xl p-4 sm:p-6 
                     text-white shadow-lg 
                     flex items-center justify-between
-                  "
+                    mt-20 ${locale === "ar" ? "ms-20" : "ms-20"}
+                  `}
                     style={{
                       background:
                         "linear-gradient(270deg, #764895 0%, #280659 100%)",

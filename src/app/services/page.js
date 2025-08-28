@@ -120,7 +120,7 @@ export default function Services() {
               {/* صورة بدائرة + جريدينت */}
               <div className="relative w-78 h-78 z-10">
                 <Link href={`/services/${service.id}`} className="block rounded-full focus:outline-none focus:ring-2 focus:ring-purple-500">
-                  <div className="rounded-full overflow-hidden w-full h-full relative border-8 border-[#EEEEEE]">
+                  <div className="rounded-full overflow-hidden  w-78 h-78 relative border-8 border-[#EEEEEE]">
                     <Image
                       src={service.img}
                       alt={service.title}
@@ -132,8 +132,8 @@ export default function Services() {
               </div>
 
               {/* خلفية الكارد تبدأ من منتصف الصورة */}
-              <div className="-mt-40 bg-[#EEEEEE] rounded-2xl pt-40 px-6  lg:px-0 pb-6 flex flex-col items-start lg:h-[450px] w-full ">
-                <h3 className="text-[24px] font-bold mt-2 mb-2 text-[#280659] text-start mx-2 ">
+              <div className="-mt-40 bg-[#EEEEEE] rounded-2xl pt-40 px-6   lg:px-6 pb-6 flex flex-col items-start lg:h-[450px] w-full ">
+                <h3 className="text-[24px] font-bold mt-2 mb-2 text-[#280659] text-start mx-2 lg:h-[110px] ">
                   {service.title}
                 </h3>
                 <p className="  mx-2 mb-6 text-[22px] lg:h-[200px]">{service.desc}</p>

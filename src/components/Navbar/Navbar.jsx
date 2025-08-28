@@ -118,7 +118,7 @@ export function MobileNavbar() {
                             >
                                 <Link href="/about" onClick={toggleMenu} className="flex items-center justify-between ">
                                     {t('about')}
-                                    <svg className={`w-4 h-4 text-purple-900 transition-transform duration-300 ${aboutOpen ? (locale==="ar" ? '-rotate-270' : 'rotate-90') : (locale==="ar" ? 'rotate-180' : '')}` } fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className={`w-4 h-4 text-purple-900 transition-transform duration-300 ${aboutOpen ? (locale === "ar" ? '-rotate-270' : 'rotate-90') : (locale === "ar" ? 'rotate-180' : '')}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                                     </svg>
                                 </Link>
@@ -147,7 +147,7 @@ export function MobileNavbar() {
                             >
                                 <div className="flex items-center justify-between">
                                     {t('services')}
-                                    <svg className={`w-4 h-4 text-purple-900 transition-transform duration-300 ${servicesOpen ? (locale==="ar" ? '-rotate-270' : 'rotate-90') : (locale==="ar" ? 'rotate-180' : '')}` } fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <svg className={`w-4 h-4 text-purple-900 transition-transform duration-300 ${servicesOpen ? (locale === "ar" ? '-rotate-270' : 'rotate-90') : (locale === "ar" ? 'rotate-180' : '')}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                                     </svg>
                                 </div>
@@ -171,27 +171,27 @@ export function MobileNavbar() {
                             <Link href="/ourteam" className={`block py-4 text-lg font-medium ${pathname === "/ourteam" ? "text-purple-600" : "text-black"}`} onClick={toggleMenu}>{t('ourTeam')}</Link>
                             <Link href="/careers" className={`block py-4 text-lg font-medium ${pathname === "/careers" ? "text-purple-600" : "text-black"}`} onClick={toggleMenu}>{t('career')}</Link>
                             <Link href="/contactus" className={`block py-4 text-lg font-medium ${pathname === "/contactus" ? "text-purple-600" : "text-black"}`} onClick={toggleMenu}>{t('contactUs')}</Link>
-                     
-                     
-                        {/* Language Selector at Bottom */}
-                        <div className=" h-48   flex items-end ">
-                            <button
-                                className="flex items-start gap-3 w-full justify-start "
-                                onClick={toggleLanguage}
-                            >
-                                <Image
-                                    src={global}
-                                    alt="Language"
-                                    width={20}
-                                    height={20}
-                                />
-                                <span className="text-black text-lg flex justify-start items-start">{t('language')}</span>
-                            </button>
-                        </div>
-                     
+
+
+                            {/* Language Selector at Bottom */}
+                            <div className=" h-48   flex items-end ">
+                                <button
+                                    className="flex items-start gap-3 w-full justify-start "
+                                    onClick={toggleLanguage}
+                                >
+                                    <Image
+                                        src={global}
+                                        alt="Language"
+                                        width={20}
+                                        height={20}
+                                    />
+                                    <span className="text-black text-lg flex justify-start items-start">{t('language')}</span>
+                                </button>
+                            </div>
+
                         </div>
 
-                     
+
                     </div>
                 </div>
             )}
@@ -265,16 +265,18 @@ export function Navbar() {
 
     return (
         <>
-            <div className="hidden sm:flex">
-                <NavigationMenu className={`lg:px-20 px-4 hidden md:flex ${locale==="ar" && "md:flex-row-reverse md:flex"}`}>
-                    <Image
-                        src={logo}
-                        alt="Logo"
-                        // width={245}
-                        // height={80}
-                        className="lg:w-[245px] lg:h-[80px] sm:w-[150px] h-[80px]"
-                    />
-                    <NavigationMenuList className={`${locale==="ar" && "flex-row-reverse flex"}`} key={pathname}>
+            <div className="hidden sm:flex fixed top-0 left-0 right-0 z-50 bg-white shadow-sm h-20 items-center justify-center w-full">
+                <NavigationMenu className={`lg:px-20 px-4 hidden md:flex ${locale === "ar" && "md:flex-row-reverse md:flex"}`}>
+                    <Link href="/">
+                        <Image
+                            src={logo}
+                            alt="Logo"
+                            // width={245}
+                            // height={80}
+                            className="lg:w-[245px] lg:h-[80px] sm:w-[150px] h-[80px]"
+                        />
+                    </Link>
+                    <NavigationMenuList className={`${locale === "ar" && "flex-row-reverse flex"}`} key={pathname}>
                         <NavigationMenuItem>
                             <NavigationMenuLink asChild className="bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent">
                                 <Link href="/" className={`lg:px-4 sm:px-2 py-2 rounded-none sm:text-[10px] md:text-[10px] xl:text-base  font-medium transition-colors duration-200 bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent ${pathname === "/" ? "text-purple-600" : "text-black"}`}>{t('home')}</Link>
@@ -297,12 +299,12 @@ export function Navbar() {
                             {aboutDropdownOpen && (
                                 <div className="absolute mt-0 z-50">
                                     <div className="bg-[#F3F3F3] rounded-2xl shadow-lg px-8 py-6 min-w-[360px]">
-                                        <div className="flex flex-col gap-4">
+                                        <div className={`flex flex-col gap-4  ${locale === "ar" ? "items-end" : ""} `}>
                                             {aboutItems.map((item) => (
                                                 <Link
                                                     key={item.title}
                                                     href={item.href}
-                                                    className="text-black hover:text-purple-600 text-lg leading-7"
+                                                    className="text-black hover:text-purple-600 text-sm leading-7"
                                                 >
                                                     {item.title}
                                                 </Link>
@@ -328,8 +330,8 @@ export function Navbar() {
                             </NavigationMenuLink>
                             {servicesDropdownOpen && (
                                 <div className="absolute mt-0 z-50">
-                                    <div className="bg-[#F3F3F3] rounded-2xl shadow-lg px-8 py-6 min-w-[640px]">
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-16">
+                                    <div className="bg-[#F3F3F3] rounded-2xl shadow-lg px-8 py-6 w-[400px] lg:w-[640px]">
+                                        <div className={` grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 lg:gap-y-4 gap-x-16 ${locale === "ar" ? "justify-items-end" : ""} `}>
                                             {servicesItems.map((item) => (
                                                 <Link
                                                     key={item.title}

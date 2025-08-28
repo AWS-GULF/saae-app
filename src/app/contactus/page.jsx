@@ -31,35 +31,35 @@ export default function Page() {
       <MarginedSection>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-48  lg:p-10">
           {/* Left Section */}
-          <div className="space-y-6">
-            <h2 className="text-2xl lg:text-3xl font-bold leading-tight mb-2">{t("contact_get_in_touch_title")}</h2>
-            <p className="lg:text-[26px] sm:text-lg text-[18px] font-[500] leading-[42px] mb-8">
+          <div className="space-y-4">
+            <h2 className="text-2xl lg:text-[26px] font-bold leading-tight mb-2">{t("contact_get_in_touch_title")}</h2>
+            <p className="lg:text-[20px] sm:text-lg text-[18px] font-[500] leading-[30px] mb-8">
               {t("contact_get_in_touch_desc")}
             </p>
 
             {/* Address */}
-            <div className="flex items-center gap-3">
-              <Image src={locationIcon} alt="Address" width={45} height={45} />
+            <div className="flex items-start gap-3">
+              <Image src={locationIcon} alt="Address" width={30} height={30} />
               <div className="flex flex-col justify-center items-start">
-                <p className="text-xl lg:text-2xl font-bold leading-tight">{t("contact_address_label")}</p>
+                <p className="text-xl lg:text-[22px] font-bold leading-tight">{t("contact_address_label")}</p>
                 <p className="font-[500] text-md">{t("contact_address_value")}</p>
               </div>
             </div>
 
             {/* Phone */}
             <div className="flex items-start gap-3">
-              <Image src={ourteamPhone} alt="Phone" width={45} height={45} />
+              <Image src={ourteamPhone} alt="Phone" width={30} height={30} />
               <div className="flex flex-col justify-center items-start">
-                <p className="text-xl lg:text-2xl font-bold leading-tight text-start">{t("contact_phone_label")}</p>
+                <p className="text-xl lg:text-[22px] font-bold leading-tight text-start">{t("contact_phone_label")}</p>
                 <p className="font-[500] text-md">{t("contact_phone_value")}</p>
               </div>
             </div>
 
             {/* Email */}
             <div className="flex items-start gap-3">
-              <Image src={ourteamMsg} alt="Email" width={45} height={45} />
+              <Image src={ourteamMsg} alt="Email" width={30} height={30} />
               <div>
-                <p className="text-xl lg:text-2xl font-bold leading-tight text-start">{t("contact_email_label")}</p>
+                <p className="text-xl lg:text-[22px] font-bold leading-tight text-start">{t("contact_email_label")}</p>
                 <p className="font-[500] text-md">{t("contact_email_value")}</p>
               </div>
             </div>
@@ -278,7 +278,7 @@ function ContactForm({ t, dir }) {
         </div>
 
         {/* Privacy Notice */}
-        <p className="text-[18px] font-[400] mt-8">
+        <p className="text-[18px] font-[400] mt-4">
           {t("contact_privacy_notice")} {" "}
           <Link href="#" className="text-[#764895] font-[500]">
             {t("contact_privacy_notice_link")}
@@ -286,7 +286,7 @@ function ContactForm({ t, dir }) {
         </p>
 
         {/* Checkbox */}
-        <div className="flex items-center gap-2 mt-8">
+        <div className="flex items-center gap-2 mt-4">
           <input
             type="checkbox"
             className="w-4 h-4"
@@ -303,7 +303,7 @@ function ContactForm({ t, dir }) {
         )}
 
         {/* Submit Button */}
-        <div className="flex justify-center items-center mt-16">
+        <div className="flex justify-center items-center mt-12">
           <Submit disabled={!isValid}>{t("contact_submit_button")}</Submit>
         </div>
       </form>

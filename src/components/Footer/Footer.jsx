@@ -14,7 +14,7 @@ export default function Footer() {
   const { t } = useLanguage();
 
   return (
-    <footer className="bg-primary text-white pt-2 sm:pt-12 pb-4 px-4 mt-auto">
+    <footer className="bg-primary text-white pt-2 sm:pt-4 pb-4 px-4 mt-auto">
       <div className="flex flex-col items-center">
         {/* Logo */}
         <Image src={logo} alt="Logo" width={200} height={150} className="mb-4" />
@@ -60,7 +60,7 @@ export default function Footer() {
         <div className="w-full border-t border-white/40 my-4"></div>
 
         {/* Copyright */}
-        <div className="text-center text-sm  lg:pb-10 pb-">
+        <div className="text-center text-sm  lg:pb-2 ">
           {t('copyright')}
         </div>
       </div>

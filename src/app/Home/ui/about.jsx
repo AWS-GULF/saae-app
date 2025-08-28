@@ -20,7 +20,7 @@ export default function About() {
               {t('about_saee_title')}
             </h2>
             
-            <p className="lg:text-[28px] sm:text-xl text-[21px]  font-[500]   leading-[42px] mb-8">
+            <p className="lg:text-[24px] sm:text-xl text-[21px]  font-[500]   leading-[42px] mb-8">
               {t('about_saee_desc')}
             </p>
             <div className='flex justify-center sm:justify-start'>

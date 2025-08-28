@@ -54,7 +54,7 @@ export default function SaeeNumbers() {
                             {t('saee_in_numbers_title')}
                         </h2>
 
-                        <p className="lg:text-[28px] sm:text-xl text-xl font-[500]   leading-[42px] mb-8  ">
+                        <p className="lg:text-[24px] sm:text-xl text-xl font-[500]   leading-[42px] mb-8  ">
                             {t('saee_in_numbers_desc')}
                         </p>
                     </div>
@@ -63,7 +63,7 @@ export default function SaeeNumbers() {
                     <div className="lg:w-1/2 w-full flex flex-wrap lg:flex-nowrap gap-8 lg:gap-12 justify-center sm:justify-evenly lg:justify-end">
                         {/* Professional Certifications */}
                         <div className="text-center">
-                            <AnimatedCounter end={30} prefix="+" />
+                            <AnimatedCounter end={40} prefix="+" />
                             <div className="font-bold text-xl lg:text-2xl">
                                 {t('saee_certifications_label')}
                             </div>
@@ -71,7 +71,7 @@ export default function SaeeNumbers() {
 
                         {/* Certified Consultants */}
                         <div className="text-center">
-                            <AnimatedCounter end={40} prefix="+" />
+                            <AnimatedCounter end={80} prefix="+" />
                             <div className="font-bold text-xl lg:text-2xl">
                                 {t('saee_consultants_label')}
                             </div>
@@ -79,7 +79,7 @@ export default function SaeeNumbers() {
 
                         {/* Years of Experience */}
                         <div className="text-center">
-                            <AnimatedCounter end={20} />
+                            <AnimatedCounter end={25} />
                             <div className="font-bold text-xl lg:text-2xl">
                                 {t('saee_experience_label')}
                             </div>
