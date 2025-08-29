@@ -70,24 +70,24 @@ const caseStudies = [
 ]
 
 export default function Page() {
-  const { dir } = useLanguage()
+  const { dir ,t } = useLanguage()
   return (
     <>
 
       <div className="hidden lg:block">
-        <PagesHero bg={caseStudiesPage} alt={"caseStudiesPage"} title={"case studies"} />
+        <PagesHero bg={caseStudiesPage} alt={"caseStudiesPage"} title={t("case_studies_title")} />
 
         <MarginedSection>
           <div >
          
             <p className="lg:text-[26px] sm:text-xl text-[10px]  font-[500] lg:leading-[42px] mb-8 ">
-              At SAEE, we define success by measurable outcomes. This page features a selection of case studies from our work across industries. Each example highlights how our tailored solutions addressed real challenges and delivered tangible business results.
+              {t("case_studies_paragraph")}
             </p>
           </div>
 
           <div className="mb-8">
             <h2 className="text-2xl lg:text-3xl font-bold leading-tight ">
-              Our Case Studies
+             {t("case_studies_subtitle")}
             </h2>
           </div>
 

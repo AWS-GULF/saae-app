@@ -124,7 +124,7 @@ export default function Hero() {
                 {showPrevious && (
                     <CarouselPrevious className={`${dir === 'rtl' ? 'right-3' : 'left-3'} top-[50%] sm:top-[52%] lg:top-[58%] -translate-y-1/2  text-gray-800 border-0 shadow-lg size-[70px]`}
                     >
-                        <Image src={heroArrorw} alt="previous" width={70} height={70} className={`${dir === 'rtl' ? '' : 'rotate-180'}`} />
+                        <Image src={heroArrorw} alt="previous" width={70} height={70} className={`${dir === 'rtl' ? '' : 'rotate-180'} lg:w-[30px] h-[30px]`} />
                     </CarouselPrevious>
                 )}
                 {showNext && (

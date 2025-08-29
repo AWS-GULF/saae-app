@@ -298,7 +298,7 @@ export function Navbar() {
                             </NavigationMenuLink>
                             {aboutDropdownOpen && (
                                 <div className="absolute mt-0 z-50">
-                                    <div className="bg-[#F3F3F3] rounded-2xl shadow-lg px-8 py-6 min-w-[360px]">
+                                    <div className="bg-[#F3F3F3] rounded-2xl shadow-lg px-8 py-6 w-[200px] ">
                                         <div className={`flex flex-col gap-4  ${locale === "ar" ? "items-end" : ""} `}>
                                             {aboutItems.map((item) => (
                                                 <Link
@@ -331,7 +331,7 @@ export function Navbar() {
                             {servicesDropdownOpen && (
                                 <div className="absolute mt-0 z-50">
                                     <div className="bg-[#F3F3F3] rounded-2xl shadow-lg px-8 py-6 w-[400px] lg:w-[640px]">
-                                        <div className={` grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 lg:gap-y-4 gap-x-16 ${locale === "ar" ? "justify-items-end" : ""} `}>
+                                        <div className={` grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 lg:gap-y-4 gap-x-16  ${locale === "ar" ? "justify-items-end " : ""} `} dir={`${locale === "ar" && "rtl"}`}>
                                             {servicesItems.map((item) => (
                                                 <Link
                                                     key={item.title}

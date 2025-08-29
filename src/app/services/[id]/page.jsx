@@ -37,7 +37,7 @@ export default function ServicePage({ params }) {
                     <p className="lg:text-[26px] sm:text-xl text-[21px]  font-[500]   leading-[42px]  ">
                         {t(service.description)}
                     </p>
-                    <ServiceButton href="/contactus">
+                    <ServiceButton href="/contactus" serviceName={t(service.title)}>
                         {t(service.button)}
                     </ServiceButton>
                 </div>
@@ -85,12 +85,12 @@ export default function ServicePage({ params }) {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
                         {service.deliveryElements.map((item, index) => {
                             return (
-                                <div key={index} className="flex flex-col justify-start items-center border-4 border-[#764895] rounded-[80px]  text-center sm:h-[300px] h-fit min-h-[200px] px-5 pb-6 sm:pb-0  ">
+                                <div key={index} className="flex flex-col justify-start items-center border-4 border-[#764895] rounded-[80px]  text-center sm:h-[350px] xl:h-[300px] h-fit min-h-[200px] px-5 lg:pb-6 sm:pb-0  ">
                                     <div className="mt-6 mb-4 ">
                                         <Image src={item.icon} alt={t(item.title)} width={68} height={68} />
                                     </div>
                                     <h3 className="text-[21px] sm:text-xl lg:text-[24px] font-bold leading-[150%] mb-2 text-primary">{t(item.title)}</h3>
-                                    <p className="text-[#30086B] font-[500] text-xl lg:text-2xl">{t(item.description)}</p>
+                                    <p className="text-[#30086B] font-[500] text-xl lg:text-[18px]">{t(item.description)}</p>
                                 </div>
                             )
                         })}

@@ -42,27 +42,24 @@ const teamMembers = [
 ]
 
 export default function Page() {
-  const { dir } = useLanguage()
+  const { dir ,t} = useLanguage()
   return (
     <div>
-      <PagesHero bg={outTeam} alt={"outTeam"} title={"Our Team"} />
+      <PagesHero bg={outTeam} alt={"outTeam"} title={t("team_title")} />
 
       <MarginedSection>
         <div>
           <h2 className="text-2xl lg:text-3xl font-bold leading-tight mb-2">
-            Meet Our Team
+          {t("team_subtitle")}
           </h2>
           <p className="lg:text-[26px] sm:text-xl text-[21px] font-[500] leading-[42px] mb-8">
-            At SAEE, we believe that people are our most valuable asset. Our
-            team brings together diverse expertise across strategy, business,
-            technology, and operations all working toward one goal: delivering
-            real, sustainable impact.
+            {t("team_paragraph")}
           </p>
         </div>
 
         <div>
           <h2 className="text-2xl lg:text-3xl font-bold leading-tight mb-8">
-            Get to know the people behind SAEE’s impact
+           {t("team_cta")}
           </h2>
         </div>
 

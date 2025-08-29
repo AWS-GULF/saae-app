@@ -20,6 +20,7 @@ import Image from 'next/image'
 import { useLanguage } from '@/hooks/useLanguage'
 import sagityEnglish from "@/Assets/images/sagityEnglish.svg"
 
+
 export default function About() {
   const { t, locale } = useLanguage();
   return (
@@ -42,9 +43,8 @@ export default function About() {
           <p className="lg:text-[28px] sm:text-xl text-[21px]  font-[500]   leading-[42px] mb-8">
             {t('about_company_overview_desc')}
           </p>
-          <LargeButton img={download}>
+          <LargeButton img={download} href="re.pdf">
             <p>{t('button_download_company_profile')}</p>
-
           </LargeButton>
 
 

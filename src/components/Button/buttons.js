@@ -86,6 +86,7 @@ export const LargeButton = ({ href = "#", children, img }) => {
   return (
     <Link
       href={href}
+      target="_blank"
       className="cursor-pointer w-[270px] lg:w-[300px] h-[64px] border-2 bg-secondary border-secondary rounded-2xl flex justify-center items-center"
     >
       <div className="flex items-center gap-3 lg:gap-4">
@@ -105,12 +106,15 @@ export const LargeButton = ({ href = "#", children, img }) => {
 };
 
 // ✅ Service button
-export const ServiceButton = ({ href = "#", children, img }) => {
+export const ServiceButton = ({ href = "#", children, img, serviceName }) => {
   const { t } = useLanguage();
+  
+  // إضافة اسم الخدمة كمعامل query في URL
+  const contactUrl = serviceName ? `/contactus?service=${encodeURIComponent(serviceName)}` : href;
 
   return (
     <Link
-      href={href}
+      href={contactUrl}
       className="cursor-pointer lg:w-[400px] w-[320px] h-[64px] border-2 bg-secondary border-secondary rounded-2xl flex justify-center items-center"
     >
       <div className="flex items-center gap-3 lg:gap-4">

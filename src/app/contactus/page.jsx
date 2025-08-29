@@ -19,7 +19,8 @@ import SaeePurpSnap from "@/Assets/icons/SaeePurpSnap.svg"
 import Link from "next/link"
 import { Submit } from "@/components/Button/buttons"
 import ConfirmApplication from '@/components/ConfirmApplication/ConfirmApplication'
-import { useMemo, useState } from "react"
+import { useMemo, useState, useEffect } from "react"
+import { useSearchParams } from "next/navigation"
 
 export default function Page() {
   const { t, dir } = useLanguage();
@@ -117,6 +118,7 @@ export default function Page() {
 }
 
 function ContactForm({ t, dir }) {
+  const searchParams = useSearchParams()
   const [fullName, setFullName] = useState("")
   const [subject, setSubject] = useState("")
   const [email, setEmail] = useState("")
@@ -124,6 +126,14 @@ function ContactForm({ t, dir }) {
   const [request, setRequest] = useState("")
   const [agree, setAgree] = useState(false)
   const [showConfirmation, setShowConfirmation] = useState(false)
+
+  // ملء حقل Subject تلقائياً إذا تم تمرير اسم الخدمة في URL
+  useEffect(() => {
+    const serviceName = searchParams.get('service')
+    if (serviceName) {
+      setSubject(serviceName)
+    }
+  }, [searchParams])
 
   const [touched, setTouched] = useState({
     fullName: false,
@@ -244,7 +254,7 @@ function ContactForm({ t, dir }) {
             <div className="flex border-[#AAAAAA] border rounded-[10px] overflow-hidden">
               <div className="px-2 text-sm border-[#AAAAAA] border-r flex items-center gap-1 min-w-[70px]">
                 <Image src={saudiArabiaIcon} alt="Saudi Arabia" width={16} height={16} />
-                <span>+966</span>
+                <span>{t("country_key")}</span>
               </div>
               <input
                 type="text"

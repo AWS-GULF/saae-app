@@ -260,7 +260,7 @@ function ApplicationForm() {
     <>
       {/* <PagesHero bg={careersBG} alt={'careersBG'} title={'Application'} /> */}
       <MarginedSection>
-        <div className="pb-8">
+        <div className="pb-8 pt-10">
                       <div className="bg-white rounded-lg max-w-screen-lg mx-auto" dir={dir}>
               <h1 className='text-center text-3xl font-bold'>{t("application_form_title")}</h1>
               <div className="p-6">

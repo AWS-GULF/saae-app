@@ -456,4 +456,14 @@
   "application_cover_letter_required": "Cover Letter is required",
   "application_privacy_agreement_required": "You must agree to the privacy notice",
   "application_info_accuracy_required": "You must confirm information accuracy"
+ ,"country_key":"+966",
+   "case_studies_title": "Case Studies",
+  "case_studies_paragraph": "At SAEE, we define success by measurable outcomes. This page features a selection of case studies from our work across industries. Each example highlights how our tailored solutions addressed real challenges and delivered tangible business results.",
+  "case_studies_subtitle": "Our Case Studies",
+
+  "team_title": "Our Team",
+  "team_subtitle": "Meet Our Team",
+  "team_paragraph": "At SAEE, we believe that people are our most valuable asset. Our team brings together diverse expertise across strategy, business, technology, and operations all working toward one goal: delivering real, sustainable impact.",
+  "team_cta": "Get to know the people behind SAEE's impact"
+
 } 
